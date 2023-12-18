@@ -1,0 +1,140 @@
+.hospital-contact-form {
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    padding: 70px;
+
+    .section-title {
+        &.with-hospital-color {
+            max-width: 650px;
+        }
+    }
+    .form-group {
+        margin-bottom: 25px;
+
+        .form-control {
+            height: 55px;
+            box-shadow: unset;
+            transition: var(--transition);
+            color: var(--paragraph-color2);
+            background-color: var(--white-color);
+            border: 1px solid var(--white-color);
+            font: {
+                size: var(--font-size);
+                // family: var(--hospital-font-family);
+            }
+            padding: {
+                left: 20px;
+                right: 20px;
+            }
+            &::placeholder {
+                transition: var(--transition);
+                color: var(--paragraph-color2);
+            }
+            &:focus {
+                border-color: var(--hospital-main-color);
+
+                &::placeholder {
+                    color: transparent;
+                }
+            }
+        }
+        textarea.form-control {
+            height: auto;
+            padding-top: 20px;
+        }
+    }
+    .default-btn {
+        width: 100%;
+        // font-family: var(--hospital-font-family);
+        background-color: var(--hospital-main-color);
+
+        &:hover {
+            background-color: var(--hospital-black-color);
+        }
+    }
+}
+iframe {
+    width: 100%;
+    border: none;
+    height: 500px;
+    margin-bottom: -8px;
+}
+
+/* Max width 767px */
+@media only screen and (max-width: 767px) {
+    .hospital-contact-form {
+        background-color: transparent;
+        border-radius: 0;
+        padding: 0;
+
+        .section-title {
+            &.with-hospital-color {
+                max-width: 100%;
+            }
+        }
+        .form-group {
+            margin-bottom: 15px;
+
+            .form-control {
+                height: 50px;
+                font-size: 14px;
+                background-color: #f8f8f8;
+                padding: {
+                    left: 12px;
+                    right: 12px;
+                }
+            }
+            textarea.form-control {
+                padding-top: 12px;
+            }
+        }
+    }
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .hospital-contact-form {
+        .form-group {
+            margin-bottom: 25px;
+        }
+    }
+}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .hospital-contact-form {
+        padding: 50px;
+
+        .section-title {
+            &.with-hospital-color {
+                max-width: 100%;
+            }
+        }
+        .form-group {
+            margin-bottom: 25px;
+
+            .form-control {
+                font-size: 15px;
+                padding: {
+                    left: 15px;
+                    right: 15px;
+                }
+            }
+            textarea.form-control {
+                padding-top: 15px;
+            }
+        }
+    }
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {
+}

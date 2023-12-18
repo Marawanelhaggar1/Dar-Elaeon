@@ -1,0 +1,245 @@
+<footer [dir]="lang" class="footer-area pt-5 pb-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-3 col-lg-3 col-sm-6">
+                <div
+                    [ngClass]="
+                        lang === 'ltr'
+                            ? 'single-footer-widget'
+                            : 'single-footer-widget-rtl'
+                    "
+                >
+                    <h2>
+                        <a routerLink="/">
+                            <img
+                                src="../../../../assets/images/favicon.png"
+                                alt=""
+                            />
+                        </a>
+                    </h2>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-2 col-sm-6 menu">
+                <div
+                    [ngClass]="
+                        lang === 'ltr'
+                            ? 'single-footer-widget'
+                            : 'single-footer-widget-rtl'
+                    "
+                    class="ps-5"
+                >
+                    <h3>{{ lang === "ltr" ? "Menu" : "القائمه" }}</h3>
+                    <ul class="quick-links">
+                        <li>
+                            <a routerLink="/about-us-2">
+                                {{ lang === "ltr" ? "About Us" : "من نحن " }}</a
+                            >
+                        </li>
+                        <li>
+                            <a routerLink="/services-2">{{
+                                lang === "ltr"
+                                    ? "Medical Services"
+                                    : "الخدمات الطبية"
+                            }}</a>
+                        </li>
+                        <li>
+                            <a routerLink="/doctors">{{
+                                lang === "ltr" ? "Doctors" : "الأطباء"
+                            }}</a>
+                        </li>
+                        <li>
+                            <a routerLink="/blog-grid">{{
+                                lang === "ltr"
+                                    ? "Centers Of Excellence"
+                                    : "المراكز المتخصصه"
+                            }}</a>
+                        </li>
+                        <li>
+                            <a routerLink="/insurance">{{
+                                lang === "ltr" ? "Insurance" : " التأمين "
+                            }}</a>
+                        </li>
+                        <li>
+                            <a routerLink="/insurance">{{
+                                lang === "ltr" ? "Contact Us" : " تواصل معنا "
+                            }}</a>
+                        </li>
+                        <!-- <li>
+                            <a routerLink="/faq">{{
+                                lang === "ltr" ? "FAQs" : "الأسئلة الشائعة"
+                            }}</a>
+                        </li> -->
+                        <li>
+                            <a routerLink="/testimonials">{{
+                                lang === "ltr" ? "Testimonials" : "أراء العملاء"
+                            }}</a>
+                        </li>
+                        <!-- <li>
+                            <a routerLink="/privacy-policy">{{
+                                lang === "ltr"
+                                    ? "Privacy Policy"
+                                    : "سياسة الخصوصية"
+                            }}</a>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-sm-6">
+                <div
+                    [ngClass]="
+                        lang === 'ltr'
+                            ? 'single-footer-widget'
+                            : 'single-footer-widget-rtl'
+                    "
+                >
+                    <h3>{{ lang === "ltr" ? "Services " : "خدمات" }}</h3>
+                    <div class="footer-widget-blog">
+                        <article class="item">
+                            <a routerLink="/service-details" class="thumb">
+                                <span
+                                    class="fullimage"
+                                    role="img"
+                                    style="
+                                        background-image: url(https://angular.hibotheme.com/inba/assets/images/footer/footer-2.jpg);
+                                    "
+                                ></span>
+                            </a>
+                            <div class="info">
+                                <span
+                                    >{{ lang === "ltr" ? "By " : " بواسطة" }}
+                                    <a routerLink="/blog-grid">{{
+                                        lang === "ltr"
+                                            ? "Daisy Gabriela"
+                                            : "تامر مصطفى "
+                                    }}</a></span
+                                >
+                                <h4>
+                                    <a routerLink="/service-details">{{
+                                        lang === "ltr"
+                                            ? "Dental Hygiene for Children"
+                                            : "صحة الأسنان للأطفال"
+                                    }}</a>
+                                </h4>
+                            </div>
+                        </article>
+                        <article class="item">
+                            <a routerLink="/service-details" class="thumb">
+                                <span
+                                    class="fullimage"
+                                    role="img"
+                                    style="
+                                        background-image: url(https://angular.hibotheme.com/inba/assets/images/footer/footer-4.jpg);
+                                    "
+                                ></span>
+                            </a>
+                            <div class="info">
+                                <span
+                                    >{{ lang === "ltr" ? "By " : " بواسطة" }}
+                                    <a routerLink="/blog-grid">{{
+                                        lang === "ltr"
+                                            ? "Ronnie Aaron"
+                                            : "أحمد عبدالله"
+                                    }}</a></span
+                                >
+                                <h4>
+                                    <a routerLink="/service-details">{{
+                                        lang === "ltr"
+                                            ? "Regular Checkup for Good Health"
+                                            : "الفحص الدوري للصحة جيدة"
+                                    }}</a>
+                                </h4>
+                            </div>
+                        </article>
+                        <article class="item">
+                            <a routerLink="/service-details" class="thumb">
+                                <span
+                                    class="fullimage"
+                                    role="img"
+                                    style="
+                                        background-image: url(https://angular.hibotheme.com/inba/assets/images/footer/footer-3.jpg);
+                                    "
+                                ></span>
+                            </a>
+                            <div class="info">
+                                <span>
+                                    <a routerLink="/blog-grid">{{
+                                        lang === "ltr"
+                                            ? "Babatunde Jon"
+                                            : "معز محمد"
+                                    }}</a></span
+                                >
+                                <h4>
+                                    <a routerLink="/service-details">{{
+                                        lang === "ltr"
+                                            ? "The Future Of Health"
+                                            : " مستقبل الصحة كمنظومة فى مصر"
+                                    }}</a>
+                                </h4>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-sm-6">
+                <div
+                    [ngClass]="
+                        lang === 'ltr'
+                            ? 'single-footer-widget'
+                            : 'single-footer-widget-rtl'
+                    "
+                >
+                    <h3>
+                        {{
+                            lang === "ltr"
+                                ? "Contact Information"
+                                : "بيانات الاتصال"
+                        }}
+                    </h3>
+                    <ul class="footer-information">
+                        <li>
+                            <i class="flaticon-039-emergency-call"></i>
+                            {{ lang === "ltr" ? "Call Today" : " اتصل اليوم " }}
+                            <span
+                                ><a href="tel:19647">{{
+                                    lang === "ltr" ? "19647" : "١٩٦٤٧ "
+                                }}</a></span
+                            >
+                        </li>
+                        <li>
+                            <i class="flaticon-040-back-in-time"></i>
+                            {{ lang === "ltr" ? " Open Hour" : "ساعات العمل" }}
+                            <span>{{
+                                lang === "ltr" ? "24 Hours" : "٢٤ ساعة"
+                            }}</span>
+                        </li>
+                        <li>
+                            <i class="flaticon-041-placeholder"></i>
+                            {{ lang === "ltr" ? "Our Location" : "عنوانا" }}
+                            <span>{{
+                                lang === "ltr"
+                                    ? " Al Wasti, El Fateh, Assiut Governorate 2232121"
+                                    : "الطريق المؤدي الي كوبري الواسطي العلوي- شرق النیل بجوار مدارس دار الكوثر "
+                            }}</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Copyright -->
+<div class="copyright-area">
+    <div class="container">
+        <div class="copyright-area-content">
+            <p>
+                {{
+                    lang === "ltr"
+                        ? "Proudly Powered by Axon | © All rights reserved Rovan Hospital 2023"
+                        : " مدعوم بفخر من أكسون | © جميع الحقوق محفوظة لمستشفى روفان ٢٠٢٣"
+                }}
+                <!-- <a href="https://hibotheme.com/" target="_blank">HiboTheme</a> -->
+            </p>
+        </div>
+    </div>
+</div>

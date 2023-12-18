@@ -1,0 +1,30 @@
+<!-- Page Banner -->
+<div [dir]="lang" class="page-banner-area ptb-100">
+    <div class="container">
+        <div
+            [ngClass]="
+                lang === 'ltr'
+                    ? 'page-banner-content'
+                    : 'page-banner-content-rtl '
+            "
+        >
+            <h2>
+                {{ lang === "ltr" ? " Make An Appointment" : "قم بالحجز" }}
+            </h2>
+            <ul class="pages-list">
+                <li>
+                    <a href="index.html">{{
+                        lang === "ltr" ? " Home" : "الرئيسيه"
+                    }}</a>
+                </li>
+                <li>{{ lang === "ltr" ? " Appointment" : "الحجز" }}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<app-features></app-features>
+
+<div class="mt-7">
+    <app-appointment></app-appointment>
+</div>

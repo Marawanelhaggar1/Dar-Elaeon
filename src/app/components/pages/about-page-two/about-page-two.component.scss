@@ -1,0 +1,21 @@
+.page-banner-content-rtl {
+    h2 {
+        color: var(--white-color);
+    }
+    .pages-list {
+        padding-left: 0px;
+    }
+    li {
+        color: var(--white-color);
+
+        a {
+            color: var(--white-color);
+            &:hover {
+                color: var(--main-color);
+            }
+        }
+        &::before {
+            color: var(--white-color);
+        }
+    }
+}

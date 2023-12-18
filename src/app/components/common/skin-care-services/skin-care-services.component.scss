@@ -1,0 +1,161 @@
+.skin-care-services-card {
+    margin-bottom: 25px;
+    transition: var(--transition);
+
+    .services-image {
+        position: relative;
+
+        .icon {
+            background-color: var(--main-color2);
+            transition: var(--transition);
+            color: var(--white-color);
+            border-radius: 50px;
+            position: absolute;
+            text-align: center;
+            font-size: 50px;
+            bottom: -30px;
+            height: 100px;
+            width: 100px;
+            left: 30px;
+
+            i {
+                left: 0;
+                right: 0;
+                top: 50%;
+                line-height: 1;
+                margin-top: 2px;
+                position: absolute;
+                transform: translateY(-50%);
+            }
+        }
+    }
+    .services-content {
+        padding: 55px 30px 30px;
+        transition: var(--transition);
+        background-color: var(--white-color);
+
+        h3 {
+            margin-bottom: 12px;
+            font: {
+                size: 24px;
+                weight: 500;
+                family: var(--font-family2);
+            };
+            a {
+                color: var(--black-color2);
+            }
+        }
+        p {
+            transition: var(--transition);
+            color: var(--paragraph-color2);
+        }
+    }
+    &:hover {
+        transform: translateY(-5px);
+
+        .services-image {
+            .icon {
+                background-color: var(--white-color);
+                color: var(--main-color2);
+            }
+        }
+        .services-content {
+            background-color: var(--main-color2);
+    
+            h3 {
+                color: var(--white-color);
+
+                a {
+                    color: var(--white-color);
+                }
+            }
+            p {
+                color: var(--white-color);
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .skin-care-services-card {
+        .services-image {
+            .icon {
+                font-size: 30px;
+                bottom: -20px;
+                height: 60px;
+                width: 60px;
+                left: 20px;
+            }
+        }
+        .services-content {
+            padding: 35px 20px 20px;
+    
+            h3 {
+                margin-bottom: 10px;
+                font-size: 19px;
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .skin-care-services-card {
+        .services-image {
+            .icon {
+                font-size: 40px;
+                bottom: -25px;
+                height: 80px;
+                width: 80px;
+                left: 25px;
+            }
+        }
+        .services-content {
+            padding: 45px 25px 25px;
+    
+            h3 {
+                font-size: 21px;
+            }
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    .skin-care-services-card {
+        .services-image {
+            position: relative;
+    
+            .icon {
+                font-size: 40px;
+                bottom: -25px;
+                height: 80px;
+                width: 80px;
+                left: 25px;
+            }
+        }
+        .services-content {
+            padding: 45px 25px 25px;
+    
+            h3 {
+                font-size: 23px;
+            }
+        }
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

@@ -1,0 +1,205 @@
+.covid-protection-image {
+    height: 550px;
+    margin-left: 50px;
+    border-radius: 10px;
+    border: 5px solid var(--white-color);
+    background: {
+        position: center center;
+        repeat: no-repeat;
+        size: cover;
+    };
+    img {
+        display: none;
+    }
+}
+.covid-protection-content {
+    .content {
+        span {
+            color: var(--covid-main-color);
+            margin-bottom: 12px;
+            display: block;
+        }
+        h2 {
+            color: var(--covid-black-color);
+            margin-bottom: 15px;
+            font: {
+                size: 38px;
+                family: var(--font-family2);
+            };
+        }
+    }
+    .protection-faq-accordion {
+        margin-top: 35px;
+    }
+}
+.covid-protection-fun-fact {
+    position: relative;
+    border-radius: 5px;
+    z-index: 1;
+    background: {
+        position: center center;
+        repeat: no-repeat;
+        size: cover;
+    };
+    padding: {
+        top: 50px;
+        left: 50px;
+        right: 50px;
+        bottom: 25px;
+    };
+    margin: {
+        top: 50px;
+        right: -230px;
+    };
+    .fun-fact {
+        margin-bottom: 25px;
+
+        h3 {
+            font-size: 40px;
+            margin-bottom: 5px;
+            color: var(--white-color);
+        }
+        p {
+            color: var(--covid-black-color);
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .covid-protection-image {
+        height: auto;
+        background-image: unset !important;
+        margin: {
+            left: 0;
+            top: 25px;
+        };
+        img {
+            display: inline-block;
+        }
+    }
+    .covid-protection-content {
+        .content {
+            span {
+                margin-bottom: 8px;
+            }
+            h2 {
+                font-size: 24px;
+            }
+        }
+        .protection-faq-accordion {
+            margin-top: 18px;
+        }
+    }
+    .covid-protection-fun-fact {
+        padding: {
+            top: 40px;
+            left: 20px;
+            right: 20px;
+            bottom: 15px;
+        };
+        margin: {
+            top: 25px;
+            right: 0;
+        };
+        .fun-fact {
+            margin-bottom: 25px;
+    
+            h3 {
+                font-size: 28px;
+                margin-bottom: 2px;
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .covid-protection-image {
+        height: auto;
+        background-image: unset !important;
+        margin: {
+            left: 0;
+            top: 25px;
+        };
+        img {
+            display: inline-block;
+        }
+    }
+    .covid-protection-content {
+        .content {
+            span {
+                margin-bottom: 10px;
+            }
+            h2 {
+                font-size: 29px;
+            }
+        }
+        .protection-faq-accordion {
+            margin-top: 20px;
+        }
+    }
+    .covid-protection-fun-fact {
+        padding: {
+            left: 30px;
+            right: 30px;
+        };
+        margin: {
+            top: 30px;
+            right: 0;
+        };
+        .fun-fact {
+            h3 {
+                font-size: 32px;
+            }
+        }
+    }
+    
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    .covid-protection-image {
+        height: 450px;
+        margin-left: 15px;
+    }
+    .covid-protection-content {
+        .content {
+            h2 {
+                font-size: 35px;
+            }
+        }
+        .protection-faq-accordion {
+            margin-top: 20px;
+        }
+    }
+    .covid-protection-fun-fact {
+        padding: {
+            left: 30px;
+            right: 30px;
+        };
+        margin: {
+            top: 30px;
+            right: -180px;
+        };
+        .fun-fact {
+            h3 {
+                font-size: 35px;
+            }
+        }
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

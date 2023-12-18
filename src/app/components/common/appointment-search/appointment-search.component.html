@@ -1,0 +1,95 @@
+<div [dir]="lang" class="container">
+    <form class="row" [formGroup]="searchForm">
+        <div class="form-group col-4 p-2">
+            <label>{{ lang === "ltr" ? "  Specialty " : " التخصص " }}</label>
+
+            <input
+                [typeahead]="specialties"
+                formControlName="specialty"
+                [placeholder]="lang === 'ltr' ? 'Specialty' : 'التخصص'"
+                [typeaheadOptionsLimit]="100"
+                [typeaheadMinLength]="0"
+                [optionsListTemplate]="customListTemplate"
+                (typeaheadOnSelect)="getDoctor()"
+                class="form-control"
+            />
+            <ng-template
+                #customListTemplate
+                let-matches="matches"
+                let-query="query"
+                let-typeaheadTemplateMethods
+            >
+                <ul class="custom-list-group">
+                    <li
+                        class="custom-list-group-item"
+                        *ngFor="let match of matches"
+                        [class.active]="
+                            typeaheadTemplateMethods.isActive(match)
+                        "
+                        (click)="
+                            typeaheadTemplateMethods.selectMatch(match, $event)
+                        "
+                        (mouseenter)="
+                            typeaheadTemplateMethods.selectActive(match)
+                        "
+                    >
+                        <i class="flaticon-149-doctor-2"></i>
+                        {{ match }}
+                    </li>
+                </ul>
+            </ng-template>
+        </div>
+        <div class="form-group col-4 p-2">
+            <label>{{ lang === "ltr" ? "  Doctor " : " دكتور " }}</label>
+            <input
+                [typeahead]="doctor"
+                formControlName="doctor"
+                [placeholder]="lang === 'ltr' ? 'Doctors' : 'الدكتور'"
+                [optionsListTemplate]="customListTemplate"
+                class="form-control"
+                [typeaheadOptionsLimit]="100"
+                [typeaheadMinLength]="0"
+                (typeaheadOnSelect)="set()"
+            />
+            <ng-template
+                #customListTemplate
+                let-matches="matches"
+                let-query="query"
+                let-typeaheadTemplateMethods
+            >
+                <ul class="custom-list-group">
+                    <li
+                        class="custom-list-group-item"
+                        *ngFor="let match of matches"
+                        [class.active]="
+                            typeaheadTemplateMethods.isActive(match)
+                        "
+                        (click)="
+                            typeaheadTemplateMethods.selectMatch(match, $event)
+                        "
+                        (mouseenter)="
+                            typeaheadTemplateMethods.selectActive(match)
+                        "
+                    >
+                        <i class="flaticon-149-doctor-2"></i>
+                        {{ match.name }}
+                    </li>
+                </ul>
+            </ng-template>
+        </div>
+        <div class="form-group col-4">
+            <a
+                [routerLink]="[
+                    '/book-doctor',
+                    docId,
+                    searchForm.value.specialty
+                ]"
+                class="default-btn"
+            >
+                <i *ngIf="lang === 'ltr'" class="bx bx-search"></i>
+                <span> {{ lang === "ltr" ? "  Search " : " ابحث " }} </span>
+                <i *ngIf="lang === 'rtl'" class="bx bx-search"></i>
+            </a>
+        </div>
+    </form>
+</div>

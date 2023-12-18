@@ -1,0 +1,47 @@
+/* Max width 767px */
+.sticky {
+    display: none;
+}
+@media only screen and (max-width: 767px) {
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (max-width: 991px) {
+    .sticky {
+        position: fixed; /* Fixed/sticky position */
+        bottom: 70px; /* Place the button at the bottom of the page */
+        right: 20px; /* Place the button 30px from the right */
+        z-index: 9999; /* Make sure it does not overlap */
+        width: 40px;
+        height: 40px;
+        background-color: #eee; /* Set a background color */
+        cursor: pointer; /* Add a mouse pointer on hover */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%; /* Rounded corners */
+        font-size: 18px; /* Increase font size */
+
+        &:hover {
+            a {
+                color: var(--main-color);
+            }
+        }
+    }
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {
+}

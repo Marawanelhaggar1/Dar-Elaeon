@@ -1,0 +1,232 @@
+<!-- Page Banner -->
+<div
+    [dir]="lang"
+    [style]="
+        lang === 'ltr'
+            ? ' background-image: url(https://angular.hibotheme.com/inba/assets/images/page-title/page-title3.jpg);'
+            : ' background-image: url(https://angular.hibotheme.com/inba/inba-rtl/assets/images/page-title/page-title3.jpg);'
+    "
+    [ngClass]="
+        lang === 'ltr'
+            ? 'page-banner-area ptb-100 four'
+            : 'page-banner-area-rtl ptb-100 four'
+    "
+>
+    <div class="container">
+        <div
+            [ngClass]="
+                lang === 'ltr'
+                    ? 'page-banner-content'
+                    : 'page-banner-content-rtl text-end'
+            "
+        >
+            <h2>{{ lang === "ltr" ? "Testimonials" : "أراء العملاء" }}</h2>
+            <ul class="pages-list">
+                <li>
+                    <a href="index.html">{{
+                        lang === "ltr" ? "Home" : "الرئيسه"
+                    }}</a>
+                </li>
+                <li>{{ lang === "ltr" ? "Testimonials" : "أراء العملاء" }}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Testimonials -->
+<div class="review-area pt-100 pb-75">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="single-review-item">
+                    <div class="icon">
+                        <i class="flaticon-034-left-quote-1"></i>
+                    </div>
+                    <p>
+                        {{
+                            lang === "ltr"
+                                ? " One of the most beautiful hospitals in Egypt. All the staff inside the hospital are respectful and the place and clinics are clean enough. The doctor in the hospital is very nice and the most important thing for them is the comfort of the patient. Honestly, it is one of the most beautiful places I have ever seen. "
+                                : " من اجمل المستشفيات في مصر كل الطاقم داخل المستشفى محترمين  وكفايه نظافة المكان والعيادات . الدكتره في المستشفي جميل جدا واهم حاجة عندهم راحة المريض بصراحه من اجمل الاماكن الا شوفتها"
+                        }}
+                    </p>
+                    <div class="review-info">
+                        <img
+                            src="https://angular.hibotheme.com/inba/assets/images/review/review-1.jpg"
+                            alt="image"
+                        />
+                        <h3>
+                            {{
+                                lang === "ltr"
+                                    ? "Dr. Sarah Taylor"
+                                    : " د. سارة تايلور"
+                            }}
+                        </h3>
+                        <span>
+                            {{
+                                lang === "ltr"
+                                    ? " Nephrologists "
+                                    : "أطباء الكلى"
+                            }}</span
+                        >
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="single-review-item">
+                    <div class="icon">
+                        <i class="flaticon-034-left-quote-1"></i>
+                    </div>
+                    <p>
+                        {{
+                            lang === "ltr"
+                                ? " I recently had the opportunity to visit the Hospital, and I was very impressed with the overall experience. The hospital is very well-organized, and the staff is highly professional and caring. I was particularly impressed with the doctors, who were very knowledgeable and took the time to explain everything to me in detail. "
+                                : "لقد أتيحت لي الفرصة مؤخرًا لزيارة المستشفى وقد أعجبت جدًا بالتجربة الشاملة. المستشفى منظم بشكل جيد للغاية، والموظفين على درجة عالية من الاحترافية والاهتمام. لقد تأثرت بشكل خاص بالأطباء الذين كانوا على دراية كبيرة واستغرقوا وقتًا لشرح كل شيء لي بالتفصيل."
+                        }}
+                    </p>
+                    <div class="review-info">
+                        <img
+                            src="https://angular.hibotheme.com/inba/assets/images/review/review-3.jpg"
+                            alt="image"
+                        />
+                        <h3>
+                            {{
+                                lang === "ltr"
+                                    ? " dr. Mostafa Mahmoud "
+                                    : "د. مصطفى محمود"
+                            }}
+                        </h3>
+                        <span>{{
+                            lang === "ltr" ? " Cardiologists " : " طبيب قلب"
+                        }}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="single-review-item">
+                    <div class="icon">
+                        <i class="flaticon-034-left-quote-1"></i>
+                    </div>
+                    <p>
+                        {{
+                            lang === "ltr"
+                                ? "I visited the hospital for a routine checkup, but I was very impressed with the facilities and services that were available. The hospital has a wide range of specialist departments, including cardiology, oncology, and neurology. The hospital also has a state-of-the-art emergency department, which is equipped to handle all types of emergencies."
+                                : "قمت بزيارة المستشفى لإجراء فحص روتيني، ولكنني أعجبت جدًا بالمرافق والخدمات المتوفرة. يضم المستشفى مجموعة واسعة من الأقسام المتخصصة، بما في ذلك أمراض القلب والأورام والأعصاب. يوجد بالمستشفى أيضًا قسم طوارئ متطور ومجهز للتعامل مع جميع أنواع حالات الطوارئ."
+                        }}
+                    </p>
+                    <div class="review-info">
+                        <img
+                            src="https://angular.hibotheme.com/inba/assets/images/review/review-2.jpg"
+                            alt="image"
+                        />
+                        <h3>
+                            {{
+                                lang === "ltr"
+                                    ? "Dr. Sara Ahmed"
+                                    : " د. سارة أحمد "
+                            }}
+                        </h3>
+                        <span>
+                            {{
+                                lang === "ltr"
+                                    ? " Endocrinologists "
+                                    : "أطباء الغدد الصماء "
+                            }}</span
+                        >
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="single-review-item">
+                    <div class="icon">
+                        <i class="flaticon-034-left-quote-1"></i>
+                    </div>
+                    <p>
+                        {{
+                            lang === "ltr"
+                                ? " A good hospital. I went once and spent the last ten days of Ramadan there. The previous Ramadan, my daughter was detained and there was great care and attention. "
+                                : "مستشفى كويسة رحت كذا مرة وقضيت هناك اخر عشر ايام من رمضان السابق حجز ابنتى وكان فى اهتمام ورعاية "
+                        }}
+                    </p>
+                    <div class="review-info">
+                        <img
+                            src="https://angular.hibotheme.com/inba/assets/images/review/review-4.jpg"
+                            alt="image"
+                        />
+                        <h3>
+                            {{
+                                lang === "ltr"
+                                    ? "Dr. Ahmed El Sayed"
+                                    : " د. أحمد السيد "
+                            }}
+                        </h3>
+                        <span>{{
+                            lang === "ltr" ? "Nephrologists" : "أطباء الكلى"
+                        }}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="single-review-item">
+                    <div class="icon">
+                        <i class="flaticon-034-left-quote-1"></i>
+                    </div>
+                    <p>
+                        {{
+                            lang === "ltr"
+                                ? "I was very impressed with the Hospital. The hospital is well-organized, the staff is professional and caring, and the facilities are state-of-the-art. I would highly recommend this hospital to anyone looking for high-quality medical care in Egypt."
+                                : "لقد تأثرت كثيرًا بالمستشفى. المستشفى منظم جيدًا، والموظفون محترفون ومهتمون، والمرافق على أحدث طراز. أوصي بشدة بهذا المستشفى لأي شخص يبحث عن رعاية طبية عالية الجودة في مصر."
+                        }}
+                    </p>
+                    <div class="review-info">
+                        <img
+                            src="https://angular.hibotheme.com/inba/inba-rtl/assets/images/review/review-5.jpg"
+                            alt="image"
+                        />
+                        <h3>
+                            {{
+                                lang === "ltr"
+                                    ? "Dr. Heba Ismael"
+                                    : "د. هبة اسماعيل"
+                            }}
+                        </h3>
+                        <span>{{
+                            lang === "ltr"
+                                ? "Orthodontist"
+                                : "طبيب تقويم الأسنان "
+                        }}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="single-review-item">
+                    <div class="icon">
+                        <i class="flaticon-034-left-quote-1"></i>
+                    </div>
+                    <p>
+                        {{
+                            lang === "ltr"
+                                ? "The staff of The Hospital are very caring and attentive. They went out of their way to make me feel comfortable and welcome. The doctors were also very patient and understanding. They took the time to answer all of my questions and explain everything to me in detail."
+                                : "موظفو المستشفى مهتمون ويقظون للغاية. لقد بذلوا قصارى جهدهم ليجعلوني أشعر بالراحة والترحيب. كان الأطباء أيضًا صبورين جدًا ومتفهمين. لقد أخذوا الوقت الكافي للإجابة على جميع أسئلتي وشرح كل شيء لي بالتفصيل."
+                        }}
+                    </p>
+                    <div class="review-info">
+                        <img
+                            src="https://lh3.googleusercontent.com/a-/ALV-UjVoUPS-vEJJ508MxU4G7K9L7lzEGDHgutRahoTebPp06xU=w60-h60-p-rp-mo-ba6-br100"
+                            alt="image"
+                        />
+                        <h3>
+                            {{
+                                lang === "ltr"
+                                    ? "Dr. Peter Gerges"
+                                    : "د. بيتر جرجس"
+                            }}
+                        </h3>
+                        <span>{{
+                            lang === "ltr" ? "Periodontist" : "طبيب اللثة"
+                        }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

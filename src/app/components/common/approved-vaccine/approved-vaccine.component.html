@@ -1,0 +1,75 @@
+<div
+    class="covid-tracker-area pt-100 pb-75"
+    style="background-image: url(assets/images/covid/tracker/map.jpg);"
+>
+    <div class="container">
+        <div class="section-title with-covid-color">
+            <span class="sub-title">Coronavirus Tracker</span>
+            <h2>6 Vaccines Approved for Use</h2>
+        </div>
+        <div class="covid-tracker-slides">
+            <owl-carousel-o [options]="vaccinesSlides">
+                <ng-template carouselSlide>
+                    <div class="covid-tracker-card">
+                        <div class="tracker-image">
+                            <img src="assets/images/covid/tracker/tracker1.png" alt="image">
+                        </div>
+                        <div class="tracker-content">
+                            <span class="sub">#RNA</span>
+                            <h3>Moderna Spikevax</h3>
+                            <p class="d-flex justify-content-between align-items-center">
+                                <span class="one"><b>Approved</b> in 85 countries</span>
+                                <span class="two">60 trials</span>
+                            </p>
+                        </div>
+                    </div>
+                </ng-template>
+                <ng-template carouselSlide>
+                    <div class="covid-tracker-card">
+                        <div class="tracker-image">
+                            <img src="assets/images/covid/tracker/tracker2.png" alt="image">
+                        </div>
+                        <div class="tracker-content">
+                            <span class="sub">#RNA</span>
+                            <h3>Pfizer/BioNTech Comirnaty</h3>
+                            <p class="d-flex justify-content-between align-items-center">
+                                <span class="one"><b>Approved</b> in 145 countries</span>
+                                <span class="two">75 trials</span>
+                            </p>
+                        </div>
+                    </div>
+                </ng-template>
+                <ng-template carouselSlide>
+                    <div class="covid-tracker-card">
+                        <div class="tracker-image">
+                            <img src="assets/images/covid/tracker/tracker3.png" alt="image">
+                        </div>
+                        <div class="tracker-content">
+                            <span class="sub">#RNA</span>
+                            <h3>Gamaleya Sputnik V</h3>
+                            <p class="d-flex justify-content-between align-items-center">
+                                <span class="one"><b>Approved</b> in 133 countries</span>
+                                <span class="two">24 trials</span>
+                            </p>
+                        </div>
+                    </div>
+                </ng-template>
+                <ng-template carouselSlide>
+                    <div class="covid-tracker-card">
+                        <div class="tracker-image">
+                            <img src="assets/images/covid/tracker/tracker1.png" alt="image">
+                        </div>
+                        <div class="tracker-content">
+                            <span class="sub">#RNA</span>
+                            <h3>Moderna Spikevax</h3>
+                            <p class="d-flex justify-content-between align-items-center">
+                                <span class="one"><b>Approved</b> in 85 countries</span>
+                                <span class="two">60 trials</span>
+                            </p>
+                        </div>
+                    </div>
+                </ng-template>
+            </owl-carousel-o>
+        </div>
+    </div>
+</div>

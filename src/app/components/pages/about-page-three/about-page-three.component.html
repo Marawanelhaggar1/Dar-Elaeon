@@ -1,0 +1,52 @@
+<!-- Page Banner -->
+<div
+    [dir]="lang"
+    [style]="
+        lang === 'ltr'
+            ? ' background-image: url(https://angular.hibotheme.com/inba/assets/images/page-title/page-title2.jpg);'
+            : ' background-image: url(https://angular.hibotheme.com/inba/inba-rtl/assets/images/page-title/page-title2.jpg);'
+    "
+    [ngClass]="
+        lang === 'ltr'
+            ? 'page-banner-area ptb-100 four'
+            : 'page-banner-area-rtl ptb-100 four'
+    "
+>
+    <div class="container">
+        <div
+            [ngClass]="
+                lang === 'ltr'
+                    ? 'page-banner-content'
+                    : 'page-banner-content-rtl text-end'
+            "
+        >
+            <h2>
+                {{ lang === "ltr" ? "About Us" : "من نحن" }}
+            </h2>
+            <ul class="pages-list">
+                <li>
+                    <a href="index.html">{{
+                        lang === "ltr" ? "Home" : "الرئيسه"
+                    }}</a>
+                </li>
+                <li>
+                    {{ lang === "ltr" ? "About Us" : "من نحن" }}
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<app-features></app-features>
+
+<app-why-choose-us></app-why-choose-us>
+
+<div class="mt-7">
+    <app-appointment></app-appointment>
+</div>
+
+<app-about></app-about>
+
+<app-feedback></app-feedback>
+
+<app-dentists></app-dentists>

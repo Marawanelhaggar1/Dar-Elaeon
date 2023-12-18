@@ -1,0 +1,204 @@
+<!-- Default Why Choose Us Section -->
+<div
+    [dir]="lang"
+    class="dental-tourism-choose-area ptb-100"
+    [ngClass]="{ 'd-none': router.url === '/index-5' }"
+>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-12">
+                <div class="dental-tourism-choose-image">
+                    <img
+                        src="../../../../assets/images/eye-doctor-hospital-department-ophthalmology-60433966.jpg"
+                        alt="choose-image"
+                        height="600"
+                    />
+                    <button class="video-btn" (click)="openPopup()">
+                        <i class="bx bx-play"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="dental-tourism-choose-content">
+                    <span class="sub-title">
+                        <i class="flaticon-198-hashtag-1"></i>
+                        {{ lang == "rtl" ? "لماذا تختارنا" : "Why Choose Us" }}
+                    </span>
+                    <h2>
+                        {{
+                            lang == "rtl"
+                                ? "فوائد سياحة الرمد"
+                                : "Benefits of Ophthalmia Tourism"
+                        }}
+                    </h2>
+                    <p>
+                        {{
+                            lang == "rtl"
+                                ? "ترتبط مزايا السياحة العلاجية، ومن الواضح أن السياحة العلاجية في طب العيون، بفعالية التكلفة، وحوافز التأمين، والرفاهية والتمريض الخاص، والإجازة في بلد أجنبي وتجاوز القواعد واللوائح."
+                                : "The advantages of medical tourism and clearly of medical tourism in ophthalmology are related to cost effectiveness, insurance incentives, luxury and private nursing, vacation in a foreign country and bypassing the rules and regulations."
+                        }}
+                    </p>
+                    <div class="choose-inner-content">
+                        <div class="flex-content">
+                            <i class="bx bxs-badge-check"></i>
+                            <h4>
+                                {{ lang == "rtl" ? "رؤيتنا" : "Our Vision" }}
+                            </h4>
+                        </div>
+                        <p>
+                            {{
+                                lang == "rtl"
+                                    ? "نحن نهدف إلى أن نكون مركزًا رائدًا للتميز في خدمات العناية بالعيون من خلال التطوير المستمر للتكنولوجيا، وجمع أفضل المتخصصين في رعاية العيون في البلدان تحت سقف واحد ونشر المعرفة من خلال التعليم والتدريب."
+                                    : "We aim to be pioneering center of excellence in eye care services through continuous up gradation of technology, bringing countries best eye care professionals under one roof and spreading knowledge through education and training."
+                            }}
+                        </p>
+                    </div>
+                    <div class="choose-inner-content">
+                        <div class="flex-content">
+                            <i class="bx bxs-badge-check"></i>
+                            <h4>
+                                {{ lang == "rtl" ? "مهمتنا" : "Our Mission" }}
+                            </h4>
+                        </div>
+                        <p>
+                            {{
+                                lang == "rtl"
+                                    ? "توفير رعاية عيون شاملة بأعلى المعايير الدولية تحت سقف واحد، لجميع شرائح المجتمع من خلال فريق متخصص من المهنيين ذوي الكفاءة العالية والمهارة والملتزمين، والحفاظ على أعلى مستوى من السلامة والنهج الأخلاقي في بيئة تتمحور حول المريض."
+                                    : "To provide comprehensive eye care of highest international standards under one roof, to all section of society by a dedicated team of highly competent, skilled and committed professionals, maintain highest level of safety and ethical approach in a patient centric environment."
+                            }}
+                        </p>
+                    </div>
+                    <div class="choose-inner-content">
+                        <div class="flex-content">
+                            <i class="bx bxs-badge-check"></i>
+                            <h4>
+                                {{
+                                    lang == "rtl"
+                                        ? "القيم الأساسية"
+                                        : "Core Values"
+                                }}
+                            </h4>
+                        </div>
+                        <p>
+                            {{
+                                lang == "rtl"
+                                    ? "خلق بيئة من الثقة والصدق والاحترام المتبادل والمساواة والنزاهة والالتزام بتوفير رعاية عيون عالية الجودة من خلال اعتماد أفضل الممارسات والتكنولوجيا ووضع احتياجات مرضانا فوق كل شيء آخر"
+                                    : "Cultivating an environment of trust, honesty, mutual respect, equality and integrity and Committing to providing quality eye care by adopting best practices and technology and Placing our patient’s needs above everything else"
+                            }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Why Choose Us Section for Home Demo - 5
+<div
+    class="skin-care-dry-area ptb-100 d-none"
+    [ngClass]="{ 'd-block': router.url === '/index-5' }"
+>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-7 col-md-12">
+                <div class="skin-care-dry-content">
+                    <span class="sub-title"># Treatment Dry Skin</span>
+                    <h2>
+                        For Dry Skin & Born Face We Provide All The Treatments
+                        To The Patients
+                    </h2>
+                    <p>
+                        Vivamus magna justo lacinia eget consectetur sed
+                        convallis at tellus. Nulla quis lorem ut libero
+                        malesuada feugiat. Curabitur aliquet quam id dui posuere
+                        blandit. Quisque velit nisi pretium ut lacinia in
+                        elementum id enim. Donec sollicitudin molestie
+                        malesuada.
+                    </p>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6">
+                            <ul class="list">
+                                <li>
+                                    <i class="bx bx-check"></i> Donec
+                                    sollicitudin molestie malesuada.
+                                </li>
+                                <li>
+                                    <i class="bx bx-check"></i> Nulla porttitor
+                                    accumsan tincidunt.
+                                </li>
+                                <li>
+                                    <i class="bx bx-check"></i> Donec rutrum
+                                    congue leo malesuada.
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <ul class="list">
+                                <li>
+                                    <i class="bx bx-check"></i> Aliquam
+                                    ullamcorper sit amet ligula.
+                                </li>
+                                <li>
+                                    <i class="bx bx-check"></i> Sed porttitor
+                                    lectus nibh.
+                                </li>
+                                <li>
+                                    <i class="bx bx-check"></i> Pellentesque
+                                    ipsum orci porta dapibus.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <ul class="dry-list">
+                        <li>
+                            <img
+                                src="assets/images/skin-care/dry/image-1.jpg"
+                                class="rounded-circle"
+                                alt="image"
+                            />
+                        </li>
+                        <li>
+                            <img
+                                src="assets/images/skin-care/dry/image-2.jpg"
+                                class="rounded-circle"
+                                alt="image"
+                            />
+                        </li>
+                        <li>
+                            <img
+                                src="assets/images/skin-care/dry/image-3.jpg"
+                                class="rounded-circle"
+                                alt="image"
+                            />
+                        </li>
+                        <li class="title">5k+ Positive Reviews</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-5 col-md-12">
+                <div class="skin-care-dry-image">
+                    <img
+                        src="assets/images/skin-care/dry/dry.png"
+                        alt="image"
+                    />
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<!-- Video Popup -->
+<div class="video-popup" *ngIf="isOpen">
+    <div class="popup-inner">
+        <iframe
+            src="https://www.youtube.com/embed/XNQk1qt__Vw"
+            title="Setup and Local Installation - React Nextjs Online Yoga Coaching &amp; Training Courses System"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+        ></iframe>
+        <button (click)="closePopup()" type="button" class="close-btn">
+            <i class="bx bx-x"></i>
+        </button>
+    </div>
+</div>

@@ -1,0 +1,187 @@
+.dental-tourism-services-area {
+    &.bg-002345 {
+        overflow: hidden;
+
+        .section-title-warp {
+            h2 {
+                color: var(--white-color);
+            }
+        }
+        .container-fluid {
+            overflow: hidden;
+            position: relative;
+            left: calc((100% - 1320px)/2);
+        }
+    }
+}
+.dental-tourism-services-card {
+    .services-image {
+        position: relative;
+
+        .icon {
+            left: 25px;
+            width: 75px;
+            bottom: 25px;
+            height: 75px;
+            font-size: 40px;
+            text-align: center;
+            position: absolute;
+            border-radius: 50px;
+            color: var(--white-color);
+            transition: var(--transition);
+            background-color: var(--main-color2);
+
+            i {
+                left: 0;
+                right: 0;
+                top: 50%;
+                line-height: 1;
+                margin-top: 1px;
+                position: absolute;
+                transform: translateY(-50%);
+            }
+        }
+    }
+    .services-content {
+        margin-top: 25px;
+
+        h3 {
+            margin-bottom: 0;
+            font: {
+                size: 24px;
+                weight: 500;
+                family: var(--font-family2);
+            };
+            a {
+                color: var(--white-color);
+            }
+        }
+    }
+    &:hover {
+        .services-image {
+            .icon {
+                background-color: var(--white-color);
+                color: var(--main-color2);
+            }
+        }
+        .services-content {
+            h3 {
+                a {
+                    color: var(--main-color2);
+                }
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .dental-tourism-services-area {
+        &.bg-002345 {
+            .container-fluid {
+                left: 0;
+            }
+        }
+    }
+    .dental-tourism-services-card {
+        .services-image {
+            .icon {
+                left: 15px;
+                width: 60px;
+                bottom: 15px;
+                height: 60px;
+                font-size: 30px;
+            }
+        }
+        .services-content {
+            margin-top: 15px;
+    
+            h3 {
+                font-size: 19px;
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {
+
+    .dental-tourism-services-area {
+        &.bg-002345 {
+            .container-fluid {
+                max-width: 540px;
+            }
+        }
+    }
+
+}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .dental-tourism-services-area {
+        &.bg-002345 {
+            .container-fluid {
+                left: 0;
+                max-width: 720px;
+            }
+        }
+    }
+    .dental-tourism-services-card {
+        .services-image {
+            .icon {
+                left: 20px;
+                width: 70px;
+                bottom: 20px;
+                height: 70px;
+                font-size: 35px;
+            }
+        }
+        .services-content {
+            margin-top: 20px;
+    
+            h3 {
+                font-size: 21px;
+            }
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    .dental-tourism-services-area {
+        &.bg-002345 {
+            .container-fluid {
+                left: calc((100% - 960px)/2);
+            }
+        }
+    }
+    .dental-tourism-services-card {
+        .services-content {
+            h3 {
+                font-size: 23px;
+            }
+        }
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+
+    .dental-tourism-services-area {
+        &.bg-002345 {
+            .container-fluid {
+                left: calc((100% - 1140px)/2);
+            }
+        }
+    }
+
+}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

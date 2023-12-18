@@ -1,0 +1,127 @@
+<div class="home-slides">
+    <owl-carousel-o [options]="homeSlides">
+        <ng-template *ngFor="let item of slides" carouselSlide>
+            <div
+                class="main-slides-item"
+                [style.background-image]="'url(' + item.image + ')'"
+            >
+                <div class="container" [dir]="lang">
+                    <div
+                        [ngClass]="
+                            lang === 'ltr'
+                                ? 'main-slides-content'
+                                : 'main-slides-content-rtl'
+                        "
+                    >
+                        <span class="sub-title">
+                            <i class="flaticon-198-hashtag-1"></i>
+
+                            {{ item.title }}
+                        </span>
+                        <h1>
+                            {{ item.sub_title }}
+                        </h1>
+                        <p>
+                            {{ item.description }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+        <!-- <ng-template carouselSlide>
+            <div
+                class="main-slides-item"
+                [style]="
+                    lang === 'ltr'
+                        ? ' background-image: url(https://angular.hibotheme.com/inba/assets/images/main-slides/slides-bg1.jpg);'
+                        : ' background-image: url(https://angular.hibotheme.com/inba/inba-rtl/assets/images/main-slides/slides-bg1.jpg);'
+                "
+            >
+                <div class="container" [dir]="lang">
+                    <div
+                        [ngClass]="
+                            lang === 'ltr'
+                                ? 'main-slides-content'
+                                : 'main-slides-content-rtl'
+                        "
+                    >
+                        <span class="sub-title">
+                            <i class="flaticon-198-hashtag-1"></i>
+                            {{
+                                lang === "ltr"
+                                    ? "Stay Healthy With Us"
+                                    : "خليك صحى معانا "
+                            }}
+                        </span>
+                        <h1>
+                            {{
+                                lang === "ltr"
+                                    ? " Personalized Medical"
+                                    : "رعاية طبية "
+                            }}
+                            <span>
+                                {{ lang === "ltr" ? "Care" : "شخصية " }}</span
+                            >
+                        </h1>
+                        <p>
+                            {{
+                                lang === "ltr"
+                                    ? "World class hospital services with the most qualified professors and consultants"
+                                    : "خدمات مستشفى على مستوى عالمي مع أكفأ الأساتذة والاستشاريين"
+                            }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+        <ng-template carouselSlide>
+            <div
+                class="main-slides-item"
+                [style]="
+                    lang === 'ltr'
+                        ? ' background-image: url(https://angular.hibotheme.com/inba/assets/images/main-slides/slides-bg2.jpg);'
+                        : ' background-image: url(https://angular.hibotheme.com/inba/inba-rtl/assets/images/main-slides/slides-bg2.jpg);'
+                "
+            >
+                <div class="container" [dir]="lang">
+                    <div
+                        [ngClass]="
+                            lang === 'ltr'
+                                ? 'main-slides-content'
+                                : 'main-slides-content-rtl'
+                        "
+                    >
+                        <span class="sub-title">
+                            <i class="flaticon-198-hashtag-1"></i>
+                            {{
+                                lang === "ltr"
+                                    ? "Stay Healthy With Us"
+                                    : "خليك صحى معانا "
+                            }}
+                        </span>
+                        <h1>
+                            {{
+                                lang === "ltr"
+                                    ? "Exceptional Care for"
+                                    : "رعاية استثنائية"
+                            }}
+                            <span>
+                                {{ lang === "ltr" ? "Women" : "للنساء" }}</span
+                            >
+                        </h1>
+                        <p>
+                            {{
+                                lang === "ltr"
+                                    ? "Stay Healthy With Us we provide specialty care in obstetrics and gynecology. We encourage all of our patients to also have a primary care physician, such as a family practice doctor or internist ."
+                                    : "نحن نقدم رعاية متخصصة في أمراض النساء والتوليد. نحن نشجع جميع مرضانا على أن يكون لديهم أيضًا طبيب رعاية أولية، مثل طبيب الأسرة ."
+                            }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </ng-template> -->
+    </owl-carousel-o>
+    <div class="appointment">
+        <app-appointment-search></app-appointment-search>
+    </div>
+</div>

@@ -1,0 +1,187 @@
+<!-- Page Banner -->
+<div [dir]="lang" class="page-banner-area ptb-100">
+    <div class="container">
+        <div
+            [ngClass]="
+                lang === 'ltr'
+                    ? 'page-banner-content'
+                    : 'page-banner-content-rtl '
+            "
+        >
+            <h2>{{ lang === "ltr" ? " Register" : "أنشئ حسابك" }}</h2>
+            <ul class="pages-list">
+                <li>
+                    <a href="index.html">{{
+                        lang === "ltr" ? " Home" : "الرئيسيه"
+                    }}</a>
+                </li>
+                <li>{{ lang === "ltr" ? " Register" : "أنشئ حسابك" }}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Register -->
+<div [dir]="lang" class="register-area ptb-100">
+    <div class="container">
+        <div class="register-form">
+            <h4>
+                {{ lang === "ltr" ? "Create Your Account" : "أنشئ حسابك" }}
+            </h4>
+            <p>
+                {{ lang === "ltr" ? " Join Us Now" : "انضم الينا ألان" }}
+            </p>
+            <div class="m-4">
+                <asl-google-signin-button
+                    type="standard"
+                    size="large"
+                    theme="filled_blue"
+                    width="399px"
+                ></asl-google-signin-button>
+            </div>
+            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <label>{{
+                        lang === "ltr" ? " First Name" : "الاسم الأول"
+                    }}</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        formControlName="first_name"
+                        [placeholder]="
+                            lang === 'ltr' ? ' First Name' : ' الاسم الأول'
+                        "
+                    />
+                </div>
+                <div class="form-group">
+                    <label>{{
+                        lang === "ltr" ? "Last Name" : "اسم العائلة"
+                    }}</label>
+                    <input
+                        type="text"
+                        formControlName="last_name"
+                        class="form-control"
+                        [placeholder]="
+                            lang === 'ltr' ? ' Last Name' : ' اسم العائلة'
+                        "
+                    />
+                </div>
+                <div class="form-group">
+                    <label>
+                        {{ lang === "ltr" ? " Email" : "بريد إلكتروني" }}</label
+                    >
+                    <input
+                        type="text"
+                        formControlName="email"
+                        class="form-control"
+                        [placeholder]="
+                            lang === 'ltr'
+                                ? 'Email Address'
+                                : 'بريدك الالكترونى'
+                        "
+                    />
+                </div>
+                <div class="form-group">
+                    <label>{{
+                        lang === "ltr" ? " Mobile Number" : "رقم الهاتف المحمول"
+                    }}</label>
+                    <input
+                        type="text"
+                        formControlName="mobile"
+                        class="form-control"
+                        [placeholder]="
+                            lang === 'ltr' ? 'Mobile Number' : 'رقم هاتفك'
+                        "
+                    />
+                </div>
+                <div class="form-group">
+                    <label>{{ lang === "ltr" ? " Gender" : "الجنس" }}</label>
+                    <select
+                        formControlName="gender"
+                        aria-placeholder="Select Gender"
+                    >
+                        <option value="" selected>
+                            {{
+                                lang === "ltr" ? " Select Gender" : "اختر حنسك"
+                            }}
+                        </option>
+                        <option value="male">
+                            {{ lang === "ltr" ? "Male" : "رجل" }}
+                        </option>
+                        <option value="female">
+                            {{ lang === "ltr" ? " Female" : "أمرأة" }}
+                        </option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>{{
+                        lang === "ltr" ? " Date Of Birth" : "تاريخ الميلاد"
+                    }}</label>
+                    <input
+                        type="text"
+                        formControlName="date_of_birth"
+                        [bsConfig]="datePickerConfig"
+                        class="form-control"
+                        [placeholder]="
+                            lang === 'ltr' ? 'Date Of Birth' : 'تاريخ ميلادك'
+                        "
+                        bsDatepicker
+                    />
+                </div>
+                <div class="form-group">
+                    <label>{{
+                        lang === "ltr" ? " Password" : "كلمة المرور"
+                    }}</label>
+                    <input
+                        formControlName="password"
+                        type="password"
+                        class="form-control"
+                        [placeholder]="
+                            lang === 'ltr' ? ' Password' : ' كلمة المرور'
+                        "
+                    />
+                </div>
+                <div class="form-group">
+                    <label>{{
+                        lang === "ltr"
+                            ? " Confirm password"
+                            : "تأكيد كلمة المرور"
+                    }}</label>
+                    <input
+                        formControlName="password_confirmation"
+                        type="password"
+                        class="form-control"
+                        [placeholder]="
+                            lang === 'ltr'
+                                ? 'Confirm password'
+                                : 'تأكيد كلمة المرور'
+                        "
+                    />
+                </div>
+                <p class="description">
+                    {{
+                        lang === "ltr"
+                            ? " The password should be at least eight characters long. To make it stronger, use upper and lower case letters, numbers, and symbols like !  ? $ % ^ &amp; )"
+                            : "يجب أن تتكون كلمة المرور من ثمانية أحرف على الأقل. ولجعلها أقوى، استخدم الأحرف الكبيرة والصغيرة والأرقام والرموز مثل !  ؟ $ % ^ &amp; )"
+                    }}
+                </p>
+                <button type="submit" class="default-btn">
+                    {{ lang === "ltr" ? " Create Account" : "أنشئ حساب" }}
+                </button>
+
+                <div class="account-text">
+                    <span
+                        >{{
+                            lang === "ltr"
+                                ? " Already have an account?"
+                                : "هل لديك حساب؟"
+                        }}
+                        <a routerLink="/login">{{
+                            lang === "ltr" ? " Login" : "سجل دخولك"
+                        }}</a></span
+                    >
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

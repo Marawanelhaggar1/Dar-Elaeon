@@ -1,0 +1,129 @@
+<!-- Page Banner -->
+<div
+    [dir]="lang"
+    [ngClass]="lang === 'ltr' ? 'page-banner-area' : 'page-banner-area-rtl '"
+    class="ptb-100"
+>
+    <div class="container">
+        <div
+            [ngClass]="
+                lang === 'ltr'
+                    ? 'page-banner-content'
+                    : 'page-banner-content-rtl '
+            "
+        >
+            <h2>{{ lang === "ltr" ? " Login" : "تسجيل الدخول" }}</h2>
+            <ul class="pages-list">
+                <li>
+                    <a href="index.html">{{
+                        lang === "ltr" ? " Home" : "الرئيسيه"
+                    }}</a>
+                </li>
+                <li>{{ lang === "ltr" ? " Login" : "تسجيل الدخول" }}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Login -->
+<div [dir]="lang" class="login-area ptb-100">
+    <div class="container">
+        <div [ngClass]="lang === 'ltr' ? 'login-form' : 'login-form-rtl'">
+            <h4>{{ lang === "ltr" ? " Login Here" : "سجل دخولك هنا" }}</h4>
+            <p>
+                {{
+                    lang === "ltr"
+                        ? " Welcome back, login to your account!"
+                        : "مرحبًا بك مرة أخرى، قم بتسجيل الدخول إلى حسابك!"
+                }}
+            </p>
+
+            <div class="m-2">
+                <asl-google-signin-button
+                    type="standard"
+                    size="large"
+                    theme="filled_blue"
+                    width="399px"
+                ></asl-google-signin-button>
+            </div>
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <label>{{
+                        lang === "ltr"
+                            ? " Your email address or Phone Number"
+                            : "عنوان بريدك الإلكتروني أو رقم هاتفك"
+                    }}</label>
+                    <input
+                        type="text"
+                        formControlName="email"
+                        class="form-control"
+                        [placeholder]="
+                            lang === 'ltr'
+                                ? ' Your email address or Phone Number'
+                                : 'عنوان بريدك الإلكتروني أو رقم هاتفك'
+                        "
+                    />
+                </div>
+                <div class="form-group">
+                    <label>{{
+                        lang === "ltr" ? " Your password" : "كلمة السر"
+                    }}</label>
+                    <input
+                        type="password"
+                        formControlName="password"
+                        class="form-control"
+                        [placeholder]="
+                            lang === 'ltr' ? 'Your password' : 'كلمة السر'
+                        "
+                    />
+                </div>
+
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-6 remember-me-wrap">
+                        <div class="form-check">
+                            <input
+                                name="gridCheck"
+                                value="I agree to the terms and privacy policy."
+                                class="form-check-input"
+                                type="checkbox"
+                                id="gridCheck"
+                                required
+                            />
+                            <label class="form-check-label" for="gridCheck">
+                                {{ lang === "ltr" ? " Remember me" : "تذكرنى" }}
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 lost-your-password-wrap">
+                        <a
+                            routerLink="/forgot-password"
+                            class="lost-your-password"
+                            >{{
+                                lang === "ltr"
+                                    ? " Lost your password?"
+                                    : "فقدت كلمة المرور الخاصة بك؟"
+                            }}</a
+                        >
+                    </div>
+                </div>
+
+                <button type="submit" class="default-btn">
+                    {{ lang === "ltr" ? " Login Now" : "سجل دخولك اللأن" }}
+                </button>
+
+                <div class="account-text">
+                    <span
+                        >{{
+                            lang === "ltr"
+                                ? " Don’t have an account?"
+                                : "ليس لديك حساب؟"
+                        }}
+                        <a routerLink="/register">{{
+                            lang === "ltr" ? " Create Account" : "إنشاء حساب"
+                        }}</a></span
+                    >
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

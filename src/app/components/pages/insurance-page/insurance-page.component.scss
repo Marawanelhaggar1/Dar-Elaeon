@@ -1,0 +1,15 @@
+@import "../../common/dentists/dentists.component.scss";
+
+.image {
+    height: 300px;
+    img {
+        max-height: 300px;
+    }
+}
+
+.doctor-content {
+    height: 120px;
+    h3 {
+        font-size: 20px !important;
+    }
+}

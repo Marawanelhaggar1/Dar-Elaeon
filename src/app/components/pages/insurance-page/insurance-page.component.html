@@ -1,0 +1,54 @@
+<!-- Page Banner -->
+<div
+    [dir]="lang"
+    class="page-banner-area ptb-100 four"
+    [style]="
+        lang === 'ltr'
+            ? ' background-image: url(https://angular.hibotheme.com/inba/assets/images/hospital/page-banner/bg-2.jpg);'
+            : ' background-image: url(https://angular.hibotheme.com/inba/inba-rtl/assets/images/hospital/page-banner/bg-2.jpg);'
+    "
+>
+    <div class="container">
+        <div
+            [ngClass]="
+                lang === 'ltr'
+                    ? 'page-banner-content'
+                    : 'page-banner-content-rtl text-end'
+            "
+        >
+            <h2>{{ lang === "ltr" ? " Insurance" : "التأمين" }}</h2>
+            <ul class="pages-list">
+                <li>
+                    <a href="index.html">{{
+                        lang === "ltr" ? " Home" : "الرئيسيه"
+                    }}</a>
+                </li>
+                <li>
+                    <p>{{ lang === "ltr" ? " Insurance" : "التأمين" }}</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Dentists -->
+<div [dir]="lang" class="doctor-area pt-100 pb-75">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-sm-6" *ngFor="let comp of companies">
+                <div class="single-doctor">
+                    <a class="d-block image">
+                        <img [src]="comp.image" alt="doctor-image" />
+                    </a>
+                    <div class="doctor-content">
+                        <h3>
+                            <a>{{
+                                lang === "ltr" ? comp.nameEn : comp.nameAr
+                            }}</a>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

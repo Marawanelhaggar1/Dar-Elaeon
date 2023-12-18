@@ -1,0 +1,101 @@
+<div [dir]="lang" class="features-area pb-75">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div
+                    [ngClass]="
+                        lang === 'ltr'
+                            ? 'single-features'
+                            : 'single-features-rtl'
+                    "
+                    class="bg-f57e57"
+                >
+                    <div class="content">
+                        <div class="icon">
+                            <i class="bx bx-leaf"></i>
+                        </div>
+                        <h3>
+                            <a routerLink="/service-details">
+                                {{
+                                    lang === "ltr"
+                                        ? "Green Hospital"
+                                        : " ندعم البيئة "
+                                }}
+                            </a>
+                        </h3>
+                        <p>
+                            {{
+                                lang === "ltr"
+                                    ? "Rouvan Hospital Is The First Green Hospital in Egypt."
+                                    : "مستشفى روفان هي اول مستشفى داعمة للبيئة في مصر"
+                            }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div
+                    [ngClass]="
+                        lang === 'ltr'
+                            ? 'single-features'
+                            : 'single-features-rtl'
+                    "
+                    class="bg-4a6577"
+                >
+                    <div class="content">
+                        <div class="icon">
+                            <i class="flaticon-151-healthcare"></i>
+                        </div>
+                        <h3>
+                            <a routerLink="/insurance">
+                                {{
+                                    lang === "ltr"
+                                        ? "Accept Insurance"
+                                        : "قبول التأمين"
+                                }}
+                            </a>
+                        </h3>
+                        <p>
+                            {{
+                                lang === "ltr"
+                                    ? "We Accept Insurance from many Insurance companies"
+                                    : "نحن نقبل التأمين من العديد من شركات التأمين"
+                            }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div
+                    [ngClass]="
+                        lang === 'ltr'
+                            ? 'single-features'
+                            : 'single-features-rtl'
+                    "
+                >
+                    <div class="content">
+                        <div class="icon">
+                            <i class="flaticon-149-doctor-2"></i>
+                        </div>
+                        <h3>
+                            <a routerLink="/center-of-excellence">
+                                {{
+                                    lang === "ltr"
+                                        ? "Centers Of Excellence"
+                                        : "المراكز المتخصصة"
+                                }}
+                            </a>
+                        </h3>
+                        <p>
+                            {{
+                                lang === "ltr"
+                                    ? "We have a lot of Centers and They are excellent in their jobs"
+                                    : "لدينا الكثير من المراكز وهم ممتازون في وظائفهم"
+                            }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,146 @@
+<div class="page-banner-area ptb-100 four" [dir]="lang">
+    <div class="container">
+        <div
+            [ngClass]="
+                lang === 'ltr'
+                    ? 'page-banner-content'
+                    : 'page-banner-content-rtl text-end'
+            "
+        >
+            <h2>
+                {{
+                    lang === "ltr"
+                        ? "Best Doctors in Egypt"
+                        : "أحسن دكاتره فى مصر"
+                }}
+            </h2>
+            <ul class="pages-list">
+                <li>
+                    <a href="index.html">{{
+                        lang === "ltr" ? "Home" : "الرئيسيه"
+                    }}</a>
+                </li>
+                <li>
+                    {{ lang === "ltr" ? "Find a Doctor" : "ابحث عن دكتور" }}
+                </li>
+            </ul>
+            <div class="mt-4 appointment">
+                <app-appointment-search></app-appointment-search>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="booking" [dir]="lang">
+    <div class="container">
+        <div class="header">
+            <div class="header-contnet">
+                <h4>
+                    {{ lang === "ltr" ? "All Specialities" : "كل التخصصات" }}
+                </h4>
+                <span
+                    >{{ "  " + doctors.length }}
+                    {{ lang === "ltr" ? " Doctors" : " طبيب" }}</span
+                >
+            </div>
+            <div class="sort">
+                <label>{{ lang === "ltr" ? "Sort :" : "رتب :" }} </label>
+                <select aria-placeholder="Sort Doctor">
+                    <option value="best match" selected>
+                        {{ lang === "ltr" ? "Best Match" : "الأكثر تطابقا" }}
+                    </option>
+                    <option value="top rated">
+                        {{ lang === "ltr" ? "Top Rated" : "الأعلى تقيما" }}
+                    </option>
+                </select>
+            </div>
+        </div>
+        <div class="booking-card" *ngFor="let doc of doctors">
+            <div class="image"><img [src]="doc.image" alt="image" /></div>
+            <div class="details">
+                <div class="title">
+                    <div class="name">
+                        <span>{{ lang === "ltr" ? "Doctor" : "دكتور" }} </span>
+                        <h3>
+                            {{ doc.name }}
+                        </h3>
+                    </div>
+                    <p class="job-title">
+                        {{ doc.title }}
+                    </p>
+                </div>
+
+                <div class="ratings">
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star"></i>
+                    <i class="bx bxs-star-half"></i>
+
+                    <p>
+                        {{
+                            lang === "ltr"
+                                ? "overall ratings from 1232"
+                                : "التقييم العام من ١٢٣٢ شخص"
+                        }}
+                    </p>
+                </div>
+
+                <div class="doctor-info">
+                    <div class="info">
+                        <i class="bx bx-location-plus"></i>
+                        <p>
+                            {{ doc.specialty.specialty }}
+                        </p>
+                    </div>
+                    <div class="info">
+                        <i class="bx bx-money"></i>
+                        <p>
+                            {{ doc.fee }}
+                        </p>
+                    </div>
+                    <div class="info">
+                        <i class="bx bx-stopwatch"></i>
+                        <p>
+                            {{
+                                lang === "ltr"
+                                    ? "Wating Period is 20 Minutes"
+                                    : "مدة الانتظار : ٢٠ دقيقة"
+                            }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="date">
+                <owl-carousel-o [options]="customOptions" dir="ltr">
+                    <ng-template
+                        *ngFor="let item of doc.doctorSchedule; index as i"
+                        carouselSlide
+                    >
+                        <div
+                            class="dates-card"
+                            [routerLink]="['/book-appointment', item.id]"
+                        >
+                            <p class="date-banner">{{ item.date }}</p>
+                            <p class="dates">
+                                {{
+                                    lang === "ltr"
+                                        ? "From " +
+                                          item.start_time +
+                                          " To " +
+                                          item.end_time
+                                        : " من" +
+                                          item.start_time +
+                                          " الى" +
+                                          item.end_time
+                                }}
+                            </p>
+                            <button type="button">
+                                {{ lang === "ltr" ? "Book" : "أحجز" }}
+                            </button>
+                        </div>
+                    </ng-template>
+                </owl-carousel-o>
+            </div>
+        </div>
+    </div>
+</div>

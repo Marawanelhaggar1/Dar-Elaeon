@@ -1,0 +1,43 @@
+@import "../../common/services/services.component.scss";
+.page-banner-content-rtl {
+    h2 {
+        color: var(--white-color);
+    }
+    .pages-list {
+        padding-left: 0px;
+    }
+    li {
+        color: var(--white-color);
+
+        a {
+            color: var(--white-color);
+            &:hover {
+                color: var(--main-color);
+            }
+        }
+        &::before {
+            color: var(--white-color);
+        }
+    }
+}
+.single-services-box {
+    height: 450px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+
+    h3 {
+        height: 100px;
+    }
+
+    p {
+        height: 120px;
+        margin-bottom: 10px;
+    }
+
+    // .header {
+    //     height: 200px;
+    //     margin-bottom: 1rem;
+    // }
+}

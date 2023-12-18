@@ -1,0 +1,18 @@
+.page-banner-content-rtl {
+    h2 {
+        color: var(--white-color);
+    }
+    li {
+        color: var(--white-color);
+
+        a {
+            color: var(--white-color);
+            &:hover {
+                color: var(--main-color);
+            }
+        }
+        &::before {
+            color: var(--white-color);
+        }
+    }
+}

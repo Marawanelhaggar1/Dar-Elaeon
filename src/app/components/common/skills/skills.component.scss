@@ -1,0 +1,191 @@
+.hospital-skills-content {
+    .sub-title {
+        color: var(--hospital-main-color);
+        margin-bottom: 15px;
+        display: block;
+        font: {
+            size: 18px;
+            weight: 500;
+            family: var(--hospital-font-family);
+        };
+    }
+    h2 {
+        margin-bottom: 15px;
+        color: var(--hospital-black-color);
+        font: {
+            size: 38px;
+            family: var(--hospital-font-family);
+        };
+    }
+    p {
+        font-family: var(--hospital-font-family);
+    }
+    .skills {
+        position: relative;
+
+        .skill-item {
+            position: relative;
+            margin-top: 25px;
+        
+            .skill-header {
+                position: relative;
+                margin-bottom: 15px;
+    
+                .skill-title {
+                    margin-bottom: 0;
+                    color: var(--hospital-black-color);
+                    font: {
+                        family: var(--hospital-font-family);
+                        weight: 600;
+                        size: 15.5px;
+                    };
+                }
+                .skill-percentage {
+                    color: var(--hospital-black-color);
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    font: {
+                        size: 15px;
+                        weight: 500;
+                        family: var(--hospital-font-family);
+                    };
+                }
+            }
+            .skill-bar {
+                position: relative;
+                width: 100%;
+    
+                .bar-inner {
+                    width: 100%;
+                    padding: 10px;
+                    position: relative;
+                    border-radius: 30px;
+                    background-color: var(--white-color);
+    
+                    .bar {
+                        background: var(--hospital-main-color);
+                        transition: all 2000ms ease;
+                        transform: translateY(-50%);
+                        border-radius: 10px;
+                        position: absolute;
+                        height: 3.5px;
+                        left: 10px;
+                        width: 0;
+                        top: 50%;
+
+                        &::before {
+                            content: '';
+                            width: 10px;
+                            top: -3.5px;
+                            right: -1px;
+                            height: 10px;
+                            position: absolute;
+                            border-radius: 100%;
+                            background-color: var(--hospital-main-color);
+                        }
+                    }
+                }
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+.hospital-skills-image {
+    padding-left: 50px;
+    text-align: center;
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .hospital-skills-content {
+        .sub-title {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        h2 {
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+        .skills {
+            .skill-item {
+                margin-top: 15px;
+            
+                .skill-header {
+                    margin-bottom: 12px;
+        
+                    .skill-title {
+                        font-size: 14px;
+                    }
+                    .skill-percentage {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+    .hospital-skills-image {
+        padding-left: 0;
+        margin-top: 25px;
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .hospital-skills-content {
+        .sub-title {
+            margin-bottom: 12px;
+            font-size: 15px;
+        }
+        h2 {
+            margin-bottom: 12px;
+            font-size: 29px;
+        }
+        .skills {
+            .skill-item {
+                margin-top: 20px;
+            }
+        }
+    }
+    .hospital-skills-image {
+        padding-left: 0;
+        margin-top: 25px;
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    .hospital-skills-content {
+        .sub-title {
+            font-size: 16px;
+        }
+        h2 {
+            font-size: 35px;
+        }
+        .skills {
+            .skill-item {
+                margin-top: 20px;
+            }
+        }
+    }
+    .hospital-skills-image {
+        padding-left: 15px;
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

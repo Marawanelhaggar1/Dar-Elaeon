@@ -1,0 +1,138 @@
+<div class="about-area pb-100" [dir]="lang">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-7 col-md-12">
+                <div
+                    [ngClass]="
+                        lang === 'ltr' ? 'about-content' : 'about-content-rtl'
+                    "
+                >
+                    <span class="sub-title">
+                        <i class="flaticon-198-hashtag-1"></i>
+                        {{
+                            lang === "ltr"
+                                ? "About Our Hospital"
+                                : "حول مستشفانا"
+                        }}
+                    </span>
+                    <h3>
+                        {{
+                            lang === "ltr"
+                                ? " Our Clients are Our Priority, We Offer Quality Medical   Services"
+                                : "عملائنا هم أولويتنا، ونحن نقدم خدمات طبية عالية الجودة"
+                        }}
+
+                        <span>
+                            {{
+                                lang === "ltr"
+                                    ? "of Specialists"
+                                    : "من المتخصصين "
+                            }}
+                        </span>
+                    </h3>
+                    <p>
+                        {{
+                            lang === "ltr"
+                                ? "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua."
+                                : " مستشفى إيليت هي أول مستشفى في مصر تعمل
+                       بنظام المراكز الطبية المتخصصة، حيث نمتلك 10 مراكز طبية
+                        نقدم من خلالها خدماتنا الطبية المتكاملة لكل مريض "
+                        }}
+                    </p>
+                    <div class="row">
+                        <div class="col-lg-4 col-6 w-100">
+                            <ul class="service-list w-100">
+                                <li *ngFor="let item of services">
+                                    <i class="flaticon-163-draw-check-mark"></i>
+                                    {{ lang === "ltr" ? item.en : item.ar }}
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="list">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="about-info">
+                                    <i class="flaticon-157-caduceus"></i>
+                                    <h4>
+                                        {{
+                                            lang === "ltr"
+                                                ? "25+ Years"
+                                                : " ٢٥+ سنه"
+                                        }}
+                                    </h4>
+                                    <span>{{
+                                        lang === "ltr"
+                                            ? "Medical Experience"
+                                            : "خبره طبية"
+                                    }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 col-md-12">
+                <div class="about-image">
+                    <img
+                        src="https://angular.hibotheme.com/inba/assets/images/about/about-1.jpg"
+                        alt="about-image"
+                    />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- About Section for Home Demo - 8 -->
+<!-- <div class="hospital-about-area ptb-100 bg-f8f8f8">
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-lg-6 col-md-12">
+                <div class="hospital-about-image">
+                    <img
+                        src="https://angular.hibotheme.com/inba/assets/images/hospital/about.png"
+                        alt="image"
+                    />
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="hospital-about-content">
+                    <span class="sub-title">Our Medical</span>
+                    <h2>
+                        We Are Setting The Standards In Research & Clinical Care
+                    </h2>
+                    <p>
+                        There are many variations of passages of Lorem Ipsum
+                        available but the majority have suffered alteration in
+                        some form by injected humour or randomised words which
+                        don't look even,
+                    </p>
+                    <h4>Inba Special Features:</h4>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-6 col-sm-6">
+                            <ul class="list">
+                                <li>Adult Trauma Center</li>
+                                <li>Birthing And Lactation Classes</li>
+                                <li>Dental And Oral Surgery</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-6 col-sm-6">
+                            <ul class="list">
+                                <li>Children's Trauma Center</li>
+                                <li>Heart And Vascular Institute</li>
+                                <li>Plastic Surgery</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a routerLink="/about-us" class="default-btn">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hospital-about-shape">
+        <img src="assets/images/hospital/about-shape.png" alt="image" />
+    </div>
+</div> -->

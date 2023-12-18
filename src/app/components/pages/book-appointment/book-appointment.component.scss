@@ -1,0 +1,165 @@
+.container {
+    display: flex;
+    // align-items: center;
+    justify-content: space-evenly;
+
+    margin: {
+        top: 2rem;
+        bottom: 2rem;
+    }
+
+    .profile {
+        display: flex;
+        justify-content: flex-start;
+        // align-items: center;
+        margin: 2rem 0;
+        .image {
+            width: 200px;
+            height: 200px;
+            // justify-self: center;
+            overflow: hidden;
+        }
+        .doctor-info {
+            .info {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 1rem;
+                margin-top: 1rem;
+
+                i {
+                    color: var(--main-color);
+                    margin-right: 1rem;
+                    border-bottom: 2px solid var(--main-color);
+                }
+            }
+        }
+        .details {
+            margin: 0 2rem;
+            margin-top: 2rem;
+            h3 {
+                font-weight: 400;
+                text-transform: capitalize;
+            }
+            p {
+                font-size: 18px;
+            }
+        }
+    }
+
+    .form {
+        background-color: #f8f9fa;
+        padding: 3rem;
+        text-align: center;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+        h3 {
+            color: var(--main-color2);
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+        form {
+            margin-top: 5px;
+
+            .form-group {
+                margin-bottom: 20px;
+
+                label {
+                    display: block;
+                    margin-bottom: 10px;
+                    color: var(--black-color);
+                    font: {
+                        weight: 500;
+                        size: 15px;
+                    }
+                }
+
+                .payment-label {
+                    font-size: 18px;
+                }
+                .form-check-label {
+                    color: var(--paragraph-color);
+                }
+
+                .form-control {
+                    background-color: transparent;
+                    transition: var(--transition);
+                    font-size: var(--font-size);
+                    border: 1px solid #e1e1e1;
+                    color: var(--black-color);
+                    line-height: initial;
+                    padding: 15px 18px;
+                    border-radius: 5px;
+                    // box-shadow: unset;
+                    height: 55px;
+
+                    &::placeholder {
+                        color: var(--paragraph-color);
+                    }
+                    &:focus {
+                        border-color: var(--main-color);
+
+                        &::placeholder {
+                            color: transparent;
+                            transition: var(--transition);
+                        }
+                    }
+                }
+            }
+            .description {
+                margin-bottom: 0;
+                font: {
+                    style: italic;
+                    size: 14px;
+                }
+            }
+            .default-btn {
+                margin-top: 20px;
+                padding: {
+                    left: 35px;
+                    right: 35px;
+                }
+            }
+            .account-text {
+                margin-top: 20px;
+
+                span {
+                    color: var(--paragraph-color);
+
+                    a {
+                        color: var(--main-color);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .container {
+        flex-direction: column;
+        .profile {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    .recaptcha {
+        width: 305px;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .recaptcha {
+        transform: scale(0.7);
+        width: 210px;
+        transform-origin: 0;
+    }
+
+    .default-btn {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+}

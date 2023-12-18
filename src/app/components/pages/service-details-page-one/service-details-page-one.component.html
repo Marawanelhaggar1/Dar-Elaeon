@@ -1,0 +1,480 @@
+<!-- Page Banner -->
+<div
+    [dir]="lang"
+    [style]="
+        lang === 'ltr'
+            ? ' background-image: url(https://angular.hibotheme.com/inba/assets/images/page-title/page-title1.jpg);'
+            : ' background-image: url(https://angular.hibotheme.com/inba/inba-rtl/assets/images/page-title/page-title1.jpg);'
+    "
+    [ngClass]="
+        lang === 'ltr'
+            ? 'page-banner-area ptb-100 four'
+            : 'page-banner-area-rtl ptb-100 four'
+    "
+>
+    <div class="container">
+        <div
+            [ngClass]="
+                lang === 'ltr'
+                    ? 'page-banner-content'
+                    : 'page-banner-content-rtl text-end'
+            "
+        >
+            <h2>
+                {{ lang === "ltr" ? "Service Details" : "تفاصيل الخدمة" }}
+            </h2>
+            <ul class="pages-list">
+                <li>
+                    <a href="index.html">
+                        {{ lang === "ltr" ? "Home" : "الرئيسه" }}
+                    </a>
+                </li>
+                <li>
+                    {{ lang === "ltr" ? "Service Details" : "تفاصيل الخدمة" }}
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Service Details -->
+<div
+    [dir]="lang"
+    [ngClass]="
+        lang === 'ltr'
+            ? 'service-details-area-ltr ptb-100'
+            : 'service-details-area-rtl ptb-100 '
+    "
+>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-12">
+                <div class="service-details-image">
+                    <img
+                        src="https://angular.hibotheme.com/inba/assets/images/services-details.jpg"
+                        alt="image"
+                    />
+                </div>
+                <div class="service-details-content">
+                    <h3>
+                        {{ lang === "ltr" ? "Dental Filling" : "حشوة الاسنان" }}
+                    </h3>
+                    <p>
+                        {{
+                            lang === "ltr"
+                                ? "When treating tooth cavities, the dentist may remove the decayed part of the tooth and then fill the gap with a filling. Learn about the steps followed in tooth fillings, and the types of fillings used."
+                                : "قد يقوم طبيب الأسنان في علاج تجويفات الأسنان بإزالة الجزء المتحلل من السن ثم سد الفراغ بالحشوة، تعرف على الخطوات المتبعة في حشو الأسنان، وأنواع الحشوة المستخدمة"
+                        }}
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <ul class="service-details-list">
+                            <li>
+                                <i class="flaticon-163-draw-check-mark"></i>
+                                {{
+                                    lang === "ltr"
+                                        ? "General Dentistry"
+                                        : "طب الأسنان العام"
+                                }}
+                            </li>
+                            <li>
+                                <i class="flaticon-163-draw-check-mark"></i>
+                                {{
+                                    lang === "ltr"
+                                        ? "Cosmetic Dentistry"
+                                        : "طب الأسنان التجميلي"
+                                }}
+                            </li>
+                            <li>
+                                <i class="flaticon-163-draw-check-mark"></i>
+                                {{
+                                    lang === "ltr"
+                                        ? "Dental Implants"
+                                        : "زرع الأسنان"
+                                }}
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-6">
+                        <ul class="service-details-list">
+                            <li>
+                                <i class="flaticon-163-draw-check-mark"></i>
+                                {{
+                                    lang === "ltr"
+                                        ? "Orthodontics"
+                                        : "تقويم الأسنان"
+                                }}
+                            </li>
+                            <li>
+                                <i class="flaticon-163-draw-check-mark"></i>
+                                {{
+                                    lang === "ltr"
+                                        ? "Teeth Whitening"
+                                        : "تبييض الأسنان"
+                                }}
+                            </li>
+                            <li>
+                                <i class="flaticon-163-draw-check-mark"></i>
+                                {{
+                                    lang === "ltr"
+                                        ? "Teeth Cleaning"
+                                        : "تنظيف الأسنان"
+                                }}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <p>
+                    {{
+                        lang === "ltr"
+                            ? "Composite fillings are among the most widely used fillings, as their color is close to the color of the teeth and more beautiful compared to other fillings. They are made of resin and plastic, and are then dried with a blue curing light."
+                            : "تعد الحشوات المركبة من أكثر الحشوات استخدامًا، نتيجة قرب لونها من لون الأسنان وأكثر جمالًا مقارنة مع غيرها من الحشوات، وهي مصنوعة من مادة راتينج والبلاستيك، ثم يتم تجفيفها بضوء المعالجة الأزرق."
+                    }}
+                </p>
+                <div class="service-details-overview">
+                    <div class="row">
+                        <div class="col-lg-6 col-sm-6 col-md-6">
+                            <div class="single-gallery">
+                                <img
+                                    src="https://angular.hibotheme.com/inba/assets/images/gallery/gallery-1.jpg"
+                                    alt="image"
+                                />
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-6 col-md-6">
+                            <div class="single-gallery">
+                                <img
+                                    src="https://angular.hibotheme.com/inba/assets/images/gallery/gallery-2.jpg"
+                                    alt="image"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p>
+                    {{
+                        lang === "ltr"
+                            ? "But composite fillings do not last for long periods, and may need to be replaced every five or ten years."
+                            : "لكن لا تدوم الحشوات المركبة لفترات طويلة، وقد تحتاج إلى استبدالها كل خمس أو عشر سنوات."
+                    }}
+                </p>
+                <div class="service-details-overview-content">
+                    <p>
+                        <span>{{
+                            lang === "ltr"
+                                ? "How To Take Care During Dental:"
+                                : "كيفية العناية أثناء علاج الأسنان:"
+                        }}</span>
+                        {{
+                            lang === "ltr"
+                                ? "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of psum is that it has a more or-less normal distribution of letters, as opposed to using."
+                                : "إنها حقيقة مثبتة منذ زمن طويل أن المحتوى المقروء للصفحة سوف يشتت انتباه القارئ عند النظر إلى تخطيطها. الهدف من  هو أنه يحتوي على توزيع طبيعي للأحرف إلى حد ما، بدلاً من الاستخدام."
+                        }}
+                    </p>
+                    <p>
+                        <span>{{
+                            lang === "ltr"
+                                ? "When To Visit your Doctor?"
+                                : "متى تزور طبيبك؟"
+                        }}</span>
+                        {{
+                            lang === "ltr"
+                                ? "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of psum is that it has a more or-less normal distribution of letters, as opposed to using."
+                                : "حقيقة مثبتة منذ زمن طويل أن المحتوى المقروء للصفحة سوف يشتت انتباه القارئ عند النظر إلى تخطيطها. الهدف من  هو أنه يحتوي على توزيع طبيعي للأحرف إلى حد ما، بدلاً من الاستخدام."
+                        }}
+                    </p>
+                    <p>
+                        <span>{{
+                            lang === "ltr"
+                                ? "Dental Options:"
+                                : "خيارات الأسنان:"
+                        }}</span>
+                        {{
+                            lang === "ltr"
+                                ? " It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of psum is that it has a more or-less normal distribution of letters, as opposed to using."
+                                : "إنها حقيقة مثبتة منذ زمن طويل أن المحتوى المقروء للصفحة سوف يشتت انتباه القارئ عند النظر إلى تخطيطها. الهدف من  هو أنه يحتوي على توزيع طبيعي للأحرف إلى حد ما، بدلاً من الاستخدام."
+                        }}
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12">
+                <aside class="widget-area">
+                    <div class="widget widget_search">
+                        <form class="search-form">
+                            <input
+                                type="search"
+                                class="search-field"
+                                [placeholder]="
+                                    lang === 'ltr' ? 'Search...' : 'ابحث...'
+                                "
+                                placeholder=""
+                            />
+                            <button type="submit">
+                                <i class="bx bx-search-alt"></i>
+                            </button>
+                        </form>
+                    </div>
+                    <!-- <div class="widget widget_inba_posts_thumb">
+                        <h3 class="widget-title">Recent posts</h3>
+                        <article class="item">
+                            <a routerLink="/blog-details" class="thumb">
+                                <span
+                                    class="fullimage cover"
+                                    style="
+                                        background-image: url(https://angular.hibotheme.com/inba/assets/images/blog/blog-1.jpg);
+                                    "
+                                    role="img"
+                                ></span>
+                            </a>
+                            <div class="info">
+                                <span>Nov 27, 2023</span>
+                                <h4 class="title usmall">
+                                    <a routerLink="/blog-details"
+                                        >New Technology Make for Dental
+                                        Operation</a
+                                    >
+                                </h4>
+                            </div>
+                        </article>
+                        <article class="item">
+                            <a routerLink="/blog-details" class="thumb">
+                                <span
+                                    class="fullimage cover"
+                                    style="
+                                        background-image: url(https://angular.hibotheme.com/inba/assets/images/blog/blog-2.jpg);
+                                    "
+                                    role="img"
+                                ></span>
+                            </a>
+                            <div class="info">
+                                <span>Nov 26, 2023</span>
+                                <h4 class="title usmall">
+                                    <a routerLink="/blog-details"
+                                        >Regular Dental care make Your Smile
+                                        Brighter</a
+                                    >
+                                </h4>
+                            </div>
+                        </article>
+                        <article class="item">
+                            <a routerLink="/blog-details" class="thumb">
+                                <span
+                                    class="fullimage cover"
+                                    style="
+                                        background-image: url(https://angular.hibotheme.com/inba/assets/images/blog/blog-3.jpg);
+                                    "
+                                    role="img"
+                                ></span>
+                            </a>
+                            <div class="info">
+                                <span>Nov 25, 2023</span>
+                                <h4 class="title usmall">
+                                    <a routerLink="/blog-details"
+                                        >Dental Hygiene for All Age to Make
+                                        Smile</a
+                                    >
+                                </h4>
+                            </div>
+                        </article>
+                    </div> -->
+                    <div class="widget widget_categories">
+                        <h3 class="widget-title">
+                            {{ lang === "ltr" ? "Categories" : "الفئات" }}
+                        </h3>
+                        <ul>
+                            <li>
+                                <a routerLink="/services-2">{{
+                                    lang === "ltr" ? "Medical" : "طبي"
+                                }}</a>
+                            </li>
+                            <li>
+                                <a routerLink="/services-2">{{
+                                    lang === "ltr" ? "Dentist" : "طبيب أسنان"
+                                }}</a>
+                            </li>
+                            <li>
+                                <a routerLink="/services-2">{{
+                                    lang === "ltr"
+                                        ? "Hygiene"
+                                        : "النظافه الشخصية"
+                                }}</a>
+                            </li>
+                            <li>
+                                <a routerLink="/services-2">{{
+                                    lang === "ltr" ? "Hospital" : "المستشفيات"
+                                }}</a>
+                            </li>
+                            <li>
+                                <a routerLink="/services-2">{{
+                                    lang === "ltr"
+                                        ? "Child Care"
+                                        : "رعاية الطفل"
+                                }}</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="widget widget_tag_cloud">
+                        <h3 class="widget-title">
+                            {{
+                                lang === "ltr"
+                                    ? "Popular Tags"
+                                    : "الكلمات الشعبية"
+                            }}
+                        </h3>
+                        <div class="tagcloud">
+                            <a routerLink="/services-2">{{
+                                lang === "ltr" ? "Business" : "ريادة الأعمال"
+                            }}</a>
+                            <a routerLink="/services-2">{{
+                                lang === "ltr" ? "Privacy" : "الخصوصية"
+                            }}</a>
+                            <a routerLink="/services-2">{{
+                                lang === "ltr" ? "Technology" : "تكنولوجيا"
+                            }}</a>
+                            <a routerLink="/services-2">{{
+                                lang === "ltr" ? "Tips" : "نصائح"
+                            }}</a>
+                            <a routerLink="/services-2">{{
+                                lang === "ltr" ? "Uncategorized" : "غير مصنف"
+                            }}</a>
+                        </div>
+                    </div>
+                    <div class="widget widget_instagram">
+                        <h3 class="widget-title">
+                            {{ lang === "ltr" ? "Gallery" : "المعرض" }}
+                        </h3>
+                        <ul>
+                            <li>
+                                <div class="box">
+                                    <img
+                                        src="https://angular.hibotheme.com/inba/assets/images/gallery/gallery-1.jpg"
+                                        alt="image"
+                                    />
+                                    <i class="bx bxl-instagram"></i>
+                                    <a
+                                        href="https://www.instagram.com/rouvanhospitaleg?fbclid=IwAR2DsgO2feehTPFmKFU-ZhIepmYdWQoyJBjum6IZvD8HQyynGVToyz1TsCY"
+                                        target="_blank"
+                                        class="link-btn"
+                                    ></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="box">
+                                    <img
+                                        src="https://angular.hibotheme.com/inba/assets/images/gallery/gallery-2.jpg"
+                                        alt="image"
+                                    />
+                                    <i class="bx bxl-instagram"></i>
+                                    <a
+                                        href="https://www.instagram.com/rouvanhospitaleg?fbclid=IwAR2DsgO2feehTPFmKFU-ZhIepmYdWQoyJBjum6IZvD8HQyynGVToyz1TsCY"
+                                        target="_blank"
+                                        class="link-btn"
+                                    ></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="box">
+                                    <img
+                                        src="https://angular.hibotheme.com/inba/assets/images/gallery/gallery-3.jpg"
+                                        alt="image"
+                                    />
+                                    <i class="bx bxl-instagram"></i>
+                                    <a
+                                        href="https://www.instagram.com/rouvanhospitaleg?fbclid=IwAR2DsgO2feehTPFmKFU-ZhIepmYdWQoyJBjum6IZvD8HQyynGVToyz1TsCY"
+                                        target="_blank"
+                                        class="link-btn"
+                                    ></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="box">
+                                    <img
+                                        src="https://angular.hibotheme.com/inba/assets/images/gallery/gallery-4.jpg"
+                                        alt="image"
+                                    />
+                                    <i class="bx bxl-instagram"></i>
+                                    <a
+                                        href="https://www.instagram.com/rouvanhospitaleg?fbclid=IwAR2DsgO2feehTPFmKFU-ZhIepmYdWQoyJBjum6IZvD8HQyynGVToyz1TsCY"
+                                        target="_blank"
+                                        class="link-btn"
+                                    ></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="box">
+                                    <img
+                                        src="https://angular.hibotheme.com/inba/assets/images/gallery/gallery-5.jpg"
+                                        alt="image"
+                                    />
+                                    <i class="bx bxl-instagram"></i>
+                                    <a
+                                        href="https://www.instagram.com/rouvanhospitaleg?fbclid=IwAR2DsgO2feehTPFmKFU-ZhIepmYdWQoyJBjum6IZvD8HQyynGVToyz1TsCY"
+                                        target="_blank"
+                                        class="link-btn"
+                                    ></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="box">
+                                    <img
+                                        src="https://angular.hibotheme.com/inba/assets/images/gallery/gallery-6.jpg"
+                                        alt="image"
+                                    />
+                                    <i class="bx bxl-instagram"></i>
+                                    <a
+                                        href="https://www.instagram.com/rouvanhospitaleg?fbclid=IwAR2DsgO2feehTPFmKFU-ZhIepmYdWQoyJBjum6IZvD8HQyynGVToyz1TsCY"
+                                        target="_blank"
+                                        class="link-btn"
+                                    ></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="box">
+                                    <img
+                                        src="https://angular.hibotheme.com/inba/assets/images/gallery/gallery-7.jpg"
+                                        alt="image"
+                                    />
+                                    <i class="bx bxl-instagram"></i>
+                                    <a
+                                        href="https://www.instagram.com/rouvanhospitaleg?fbclid=IwAR2DsgO2feehTPFmKFU-ZhIepmYdWQoyJBjum6IZvD8HQyynGVToyz1TsCY"
+                                        target="_blank"
+                                        class="link-btn"
+                                    ></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="box">
+                                    <img
+                                        src="https://angular.hibotheme.com/inba/assets/images/gallery/gallery-8.jpg"
+                                        alt="image"
+                                    />
+                                    <i class="bx bxl-instagram"></i>
+                                    <a
+                                        href="https://www.instagram.com/rouvanhospitaleg?fbclid=IwAR2DsgO2feehTPFmKFU-ZhIepmYdWQoyJBjum6IZvD8HQyynGVToyz1TsCY"
+                                        target="_blank"
+                                        class="link-btn"
+                                    ></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="box">
+                                    <img
+                                        src="https://angular.hibotheme.com/inba/assets/images/gallery/gallery-9.jpg"
+                                        alt="image"
+                                    />
+                                    <i class="bx bxl-instagram"></i>
+                                    <a
+                                        href="https://www.instagram.com/rouvanhospitaleg?fbclid=IwAR2DsgO2feehTPFmKFU-ZhIepmYdWQoyJBjum6IZvD8HQyynGVToyz1TsCY"
+                                        target="_blank"
+                                        class="link-btn"
+                                    ></a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+</div>

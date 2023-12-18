@@ -1,0 +1,189 @@
+.hospital-call-to-action-area {
+    background: {
+        position: center center;
+        repeat: no-repeat;
+        size: cover;
+    };
+}
+.hospital-call-to-action-content {
+    text-align: center;
+
+    span {
+        display: block;
+        margin-bottom: 15px;
+        color: var(--white-color);
+        font: {
+            size: 18px;
+            weight: 500;
+            family: var(--hospital-font-family);
+        };
+    }
+    h3 {
+        color: var(--white-color);
+        margin-bottom: 15px;
+        font: {
+            size: 38px;
+            family: var(--hospital-font-family);
+        };
+    }
+    p {
+        color: var(--white-color);
+        margin-bottom: 0;
+        font: {
+            size: 18px;
+            weight: 500;
+            family: var(--hospital-font-family);
+        };
+        a {
+            color: var(--white-color);
+        }
+    }
+    .action-btn-list {
+        padding-left: 0;
+        list-style-type: none;
+        margin: {
+            top: 25px;
+            bottom: 0;
+        };
+        li {
+            display: inline-block;
+            margin-right: 20px;
+            margin: {
+                left: 10px;
+                right: 10px;
+            };
+            &:last-child {
+                margin-right: 0;
+            }
+            &:first-child {
+                margin-left: 0;
+            }
+            .appointment-btn {
+                background: rgba(255, 255, 255, 0.26);
+                color: var(--white-color);
+                display: inline-block;
+                border-radius: 5px;
+                padding: 15px 30px;
+                font: {
+                    family: var(--hospital-font-family);
+                    size: var(--font-size);
+                    weight: 500;
+                };
+                &:hover {
+                    background-color: var(--hospital-black-color);
+                }
+            }
+            .see-btn {
+                background-color: var(--hospital-black-color);
+                color: var(--white-color);
+                display: inline-block;
+                border-radius: 5px;
+                padding: 15px 30px;
+                font: {
+                    family: var(--hospital-font-family);
+                    size: var(--font-size);
+                    weight: 500;
+                };
+                &:hover {
+                    background: rgba(255, 255, 255, 0.26);
+                }
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .hospital-call-to-action-content {
+        span {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        h3 {
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+        p {
+            font-size: 14px;
+        }
+        .action-btn-list {
+            margin-top: 15px;
+
+            li {
+                margin: {
+                    left: 5px;
+                    right: 5px;
+                };
+                .appointment-btn {
+                    padding: 11px 15px;
+                    font-size: 14px;
+                }
+                .see-btn {
+                    padding: 11px 15px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .hospital-call-to-action-content {
+        span {
+            margin-bottom: 12px;
+            font-size: 15px;
+        }
+        h3 {
+            margin-bottom: 12px;
+            font-size: 29px;
+        }
+        p {
+            font-size: 15px;
+        }
+        .action-btn-list {
+            margin-top: 20px;
+
+            li {
+                .appointment-btn {
+                    padding: 13px 30px;
+                    font-size: 15px;
+                }
+                .see-btn {
+                    padding: 13px 30px;
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    .hospital-call-to-action-content {
+        span {
+            font-size: 17px;
+        }
+        h3 {
+            font-size: 35px;
+        }
+        p {
+            font-size: 17px;
+        }
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

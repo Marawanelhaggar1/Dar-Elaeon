@@ -1,0 +1,262 @@
+.hospital-banner-area {
+    padding-top: 50px;
+    background: {
+        position: center center;
+        repeat: no-repeat;
+        size: cover;
+    };
+    .container-fluid {
+        padding: {
+            left: 30px;
+            right: 30px;
+        };
+    }
+}
+.hospital-banner-content {
+    position: relative;
+    top: -25px;
+
+    .sub-title {
+        border: 1px solid rgba(255, 255, 255, 0.46);
+        background: rgba(255, 255, 255, 0.21);
+        color: var(--white-color);
+        display: inline-block;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        padding: 8px 18px;
+        font: {
+            family: var(--hospital-font-family);
+            weight: 500;
+            size: 18px;
+        };
+    }
+    h1 {
+        color: var(--white-color);
+        margin-bottom: 15px;
+        font: {
+            size: 75px;
+            family: var(--hospital-font-family);
+        };
+    }
+    p {
+        color: var(--white-color);
+        max-width: 750px;
+        font: {
+            family: var(--hospital-font-family);
+            size: 18px;
+        };
+    }
+    .default-btn {
+        margin-top: 10px;
+        font-family: var(--hospital-font-family);
+        background-color: var(--hospital-black-color);
+        border: 1px solid var(--hospital-black-color);
+
+        &:hover {
+            border-color: var(--white-color);
+            color: var(--hospital-black-color);
+            background-color: var(--white-color);
+        }
+    }
+}
+.hospital-banner-image {
+    position: relative;
+    z-index: 1;
+
+    .circle {
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        content: "";
+        width: 625px;
+        margin: auto;
+        height: 625px;
+        position: absolute;
+        border-radius: 50%;
+        background: linear-gradient(180.73deg, rgba(255, 255, 255, 0.6) -0.9%, rgba(255, 255, 255, 0) 101.47%, rgba(255, 255, 255, 0.287425) 101.48%, #FFFFFF 101.5%);
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .hospital-banner-area {
+        padding-top: 60px;
+        
+        .container-fluid {
+            padding: {
+                left: var(--bs-gutter-x,.75rem);
+                right: var(--bs-gutter-x,.75rem);
+            };
+        }
+    }
+    .hospital-banner-content {
+        top: 0;
+    
+        .sub-title {
+            margin-bottom: 15px;
+            padding: 6px 15px;
+            font-size: 14px;
+        }
+        h1 {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+        p {
+            max-width: 100%;
+            font-size: 15px;
+        }
+        .default-btn {
+            margin-top: 0;
+        }
+    }
+    .hospital-banner-image {
+        margin-top: 25px;
+    
+        .circle {
+            display: none;
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {
+
+    .hospital-banner-area {
+        .container-fluid {
+            max-width: 540px;
+        }
+    }
+
+}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .hospital-banner-area {
+        padding-top: 80px;
+
+        .container-fluid {
+            max-width: 720px;
+            padding: {
+                left: var(--bs-gutter-x,.75rem);
+                right: var(--bs-gutter-x,.75rem);
+            };
+        }
+    }
+    .hospital-banner-content {
+        top: 0;
+
+        .sub-title {
+            margin-bottom: 15px;
+            padding: 7px 15px;
+            font-size: 16px;
+        }
+        h1 {
+            font-size: 40px;
+            margin-bottom: 12px;
+        }
+        p {
+            max-width: 600px;
+            font-size: 16px;
+        }
+        .default-btn {
+            margin-top: 5px;
+        }
+    }
+    .hospital-banner-image {
+        margin-top: 25px;
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    .hospital-banner-area {
+        .container-fluid {
+            max-width: 960px;
+            padding: {
+                left: var(--bs-gutter-x,.75rem);
+                right: var(--bs-gutter-x,.75rem);
+            };
+        }
+    }
+    .hospital-banner-content {
+        top: -15px;
+    
+        .sub-title {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        h1 {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+        p {
+            max-width: 100%;
+            font-size: 16px;
+        }
+        .default-btn {
+            margin-top: 0;
+        }
+    }
+    .hospital-banner-image {
+        .circle {
+            display: none;
+        }
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+
+    .hospital-banner-content {
+        top: -15px;
+
+        .sub-title {
+            font-size: 17px;
+            margin-bottom: 15px;
+        }
+        h1 {
+            font-size: 60px;
+        }
+        p {
+            max-width: 100%;
+            font-size: 17px;
+        }
+        .default-btn {
+            margin-top: 5px;
+        }
+    }
+    .hospital-banner-image {
+        .circle {
+            width: 550px;
+            height: 550px;
+        }
+    }
+
+}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {
+
+    .hospital-banner-area {
+        .container-fluid {
+            max-width: 1920px;
+            padding: {
+                left: 100px;
+                right: 100px;
+            };
+        }
+    }
+    .hospital-banner-content {
+        h1 {
+            font-size: 90px;
+        }
+    }
+
+}

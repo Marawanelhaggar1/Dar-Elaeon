@@ -1,0 +1,72 @@
+<div [dir]="lang" class="hospital-fun-facts-area pt-100 pb-75">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-6 col-sm-3">
+                <div class="hospital-fun-fact">
+                    <h3>{{ lang === "ltr" ? "120" : " ١٢٠" }}</h3>
+                    <p>
+                        {{
+                            lang === "ltr"
+                                ? "Number Of Clinics"
+                                : " عدد العيادات"
+                        }}
+                    </p>
+                    <div class="shape">
+                        <img
+                            src="assets/images/hospital/fun-fact/img1.png"
+                            alt="image"
+                        />
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-6 col-sm-3">
+                <div class="hospital-fun-fact">
+                    <h3>{{ lang === "ltr" ? "234" : " ٢٣٤" }}</h3>
+                    <p>
+                        {{ lang === "ltr" ? "24/7 Emergency" : " 24/7 طوارئ" }}
+                    </p>
+                    <div class="shape">
+                        <img
+                            src="assets/images/hospital/fun-fact/img2.png"
+                            alt="image"
+                        />
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-6 col-sm-3">
+                <div class="hospital-fun-fact">
+                    <h3>{{ lang === "ltr" ? "2234" : " ٢٢٣٤" }}</h3>
+                    <p>
+                        {{
+                            lang === "ltr" ? "Number Of Beds" : " عدد العيادات"
+                        }}
+                    </p>
+                    <div class="shape">
+                        <img
+                            src="assets/images/hospital/fun-fact/img3.png"
+                            alt="image"
+                        />
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-6 col-sm-3">
+                <div class="hospital-fun-fact">
+                    <h3>{{ lang === "ltr" ? "100+" : " ١٠٠+" }}</h3>
+                    <p>
+                        {{
+                            lang === "ltr"
+                                ? "Number Of Debarment's"
+                                : " عدد الأقسام"
+                        }}
+                    </p>
+                    <div class="shape">
+                        <img
+                            src="assets/images/hospital/fun-fact/img4.png"
+                            alt="image"
+                        />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

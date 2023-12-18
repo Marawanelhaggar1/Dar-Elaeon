@@ -1,0 +1,56 @@
+<div
+    [dir]="lang"
+    [ngClass]="lang === 'ltr' ? 'page-banner-area' : 'page-banner-area-rtl '"
+    class="ptb-100"
+>
+    <div class="container">
+        <div
+            [ngClass]="
+                lang === 'ltr'
+                    ? 'page-banner-content'
+                    : 'page-banner-content-rtl '
+            "
+        >
+            <h2>{{ lang === "ltr" ? " Services" : "الخدمات" }}</h2>
+            <ul class="pages-list">
+                <li>
+                    <a href="index.html">{{
+                        lang === "ltr" ? " Home" : "الرئيسيه"
+                    }}</a>
+                </li>
+                <li>{{ lang === "ltr" ? " Services" : "الخدمات" }}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- Services -->
+<div class="services-area bg-f8f8f8 ptb-100">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6" *ngFor="let ser of services">
+                <div class="single-services-box">
+                    <div class="icon">
+                        <i [ngClass]="ser.icon"></i>
+                    </div>
+
+                    <h3>
+                        <a routerLink="/service-details">
+                            {{ lang === "ltr" ? ser.en : ser.ar }}
+                        </a>
+                    </h3>
+                    <p>
+                        {{
+                            lang === "ltr"
+                                ? ser.descriptionEn
+                                : ser.descriptionAr
+                        }}
+                    </p>
+
+                    <a routerLink="/service-details" class="default-btn">
+                        {{ lang === "ltr" ? " Read More" : "أقرأ المزيد" }}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,130 @@
+<div [dir]="lang" class="container">
+    <div class="profile">
+        <div class="image">
+            <img [src]="doctor.image" alt="image" />
+        </div>
+        <div class="details">
+            <h3>
+                {{ doctor.name }}
+            </h3>
+            <p>
+                {{ doctor.title }}
+            </p>
+            <div class="doctor-info">
+                <div class="info">
+                    <i class="bx bx-location-plus"></i>
+                    <p>
+                        {{ doctor.specialty.specialty }}
+                    </p>
+                </div>
+                <div class="info">
+                    <i class="bx bx-money"></i>
+                    <p>
+                        {{
+                            lang === "ltr"
+                                ? "Fee : " + doctor.fee + " EGB"
+                                : "السعر : " + doctor.fee + " جم"
+                        }}
+                    </p>
+                </div>
+                <div class="info">
+                    <i class="bx bx-stopwatch"></i>
+                    <p>
+                        {{
+                            lang === "ltr"
+                                ? "Wating Period is 20 Minutes"
+                                : "مدة الانتظار : ٢٠ دقيقة"
+                        }}
+                    </p>
+                </div>
+                <div class="info">
+                    <i class="bx bx-calendar-event"></i>
+                    <p>
+                        {{ schedule.date }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form">
+        <h3>{{ lang === "ltr" ? "Appointment Form" : " أحجز الأن " }}</h3>
+        <div>
+            <form [formGroup]="appointmentForm" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <input
+                        type="text"
+                        formControlName="patient_name"
+                        class="form-control"
+                        [placeholder]="
+                            lang === 'ltr' ? 'Last Name' : 'اسم العائلة'
+                        "
+                    />
+                </div>
+                <div class="form-group">
+                    <input
+                        type="text"
+                        formControlName="email"
+                        class="form-control"
+                        [placeholder]="
+                            lang === 'ltr'
+                                ? 'Email address'
+                                : 'بريدك اللألكترونى'
+                        "
+                    />
+                </div>
+                <div class="form-group">
+                    <input
+                        type="text"
+                        formControlName="phone"
+                        class="form-control"
+                        [placeholder]="
+                            lang === 'ltr' ? 'Mobile Number' : 'رقم هاتفك'
+                        "
+                    />
+                </div>
+                <div class="form-group text-start">
+                    <label class="payment-label">{{
+                        lang === "ltr" ? "PayMent Method" : "طرق الدفع"
+                    }}</label>
+                    <div class="form-check">
+                        <input
+                            class="form-check-input"
+                            type="radio"
+                            value="Insured"
+                            formControlName="payment"
+                            id="flexRadioDefault1"
+                        />
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            {{ lang === "ltr" ? "Insured" : "التأمين" }}
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input
+                            class="form-check-input"
+                            type="radio"
+                            value="Cash"
+                            id="flexRadioDefault2"
+                            formControlName="payment"
+                            checked
+                        />
+                        <label class="form-check-label" for="flexRadioDefault2">
+                            {{ lang === "ltr" ? "Cash" : " نقدي" }}
+                        </label>
+                    </div>
+                </div>
+                <div dir="ltr" class="recaptcha">
+                    <re-captcha
+                        (resolved)="resolved($event)"
+                        (errored)="onError($event)"
+                        errorMode="handled"
+                        render="explicit"
+                        [siteKey]="siteKey"
+                    ></re-captcha>
+                </div>
+                <button type="submit" class="default-btn">
+                    {{ lang === "ltr" ? "Book an Appointment" : " أحجز الأن " }}
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

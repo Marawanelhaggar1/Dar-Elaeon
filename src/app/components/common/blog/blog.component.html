@@ -1,0 +1,271 @@
+<div
+    class="blog-area pt-100 pb-75"
+    [ngClass]="{
+        'd-none':
+            router.url === '/index-4' ||
+            router.url === '/index-5' ||
+            router.url === '/index-6' ||
+            router.url === '/index-7' ||
+            router.url === '/index-8'
+    }"
+>
+    <div class="container">
+        <div class="section-title-warp">
+            <span class="sub-title">
+                <i class="flaticon-198-hashtag-1"></i>
+                Update News and Blogs
+            </span>
+            <h2>Stay Updated with Our Latest News and Blog</h2>
+            <a routerLink="/blog-grid" class="default-btn">View All</a>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="single-blog">
+                    <div class="blog-image">
+                        <a routerLink="/blog-details" class="d-block">
+                            <img
+                                src="assets/images/blog/blog-1.jpg"
+                                alt="blog-image"
+                            />
+                        </a>
+                        <!-- <div class="date">10 Jun</div> -->
+                        <div class="tag">
+                            <a routerLink="/blog-grid">Technology</a>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <h3>
+                            <a routerLink="/blog-details">
+                                New Technology Make for Dental Operation
+                            </a>
+                        </h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipiscing
+                            elit sed do eiusmod.
+                        </p>
+                        <a routerLink="/blog-details" class="blog-btn"
+                            >Read More</a
+                        >
+                        <ul class="entry-meta">
+                            <li>
+                                <i class="bx bxs-user"></i>
+                                <span
+                                    >By
+                                    <a routerLink="/blog-grid"
+                                        >Daisy Gabriela</a
+                                    ></span
+                                >
+                            </li>
+                            <li>
+                                <i class="bx bxs-comment"></i>
+                                2 Comments
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="single-blog">
+                    <div class="blog-image">
+                        <a routerLink="/blog-details" class="d-block">
+                            <img
+                                src="assets/images/blog/blog-2.jpg"
+                                alt="blog-image"
+                            />
+                        </a>
+                        <!-- <div class="date">11 Jun</div> -->
+                        <div class="tag">
+                            <a routerLink="/blog-grid">Dental</a>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <h3>
+                            <a routerLink="/blog-details">
+                                Regular Dental care make Your Smile Brighter
+                            </a>
+                        </h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipiscing
+                            elit sed do eiusmod.
+                        </p>
+                        <a routerLink="/blog-details" class="blog-btn"
+                            >Read More</a
+                        >
+                        <ul class="entry-meta">
+                            <li>
+                                <i class="bx bxs-user"></i>
+                                <span
+                                    >By
+                                    <a routerLink="/blog-grid"
+                                        >Ronnie Aaron</a
+                                    ></span
+                                >
+                            </li>
+                            <li>
+                                <i class="bx bxs-comment"></i>
+                                2 Comments
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="single-blog">
+                    <div class="blog-image">
+                        <a routerLink="/blog-details" class="d-block">
+                            <img
+                                src="assets/images/blog/blog-3.jpg"
+                                alt="blog-image"
+                            />
+                        </a>
+                        <!-- <div class="date">12 Jun</div> -->
+                        <div class="tag">
+                            <a routerLink="/blog-grid">Hygiene</a>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <h3>
+                            <a routerLink="/blog-details">
+                                Dental Hygiene for All Age to Make Smile
+                            </a>
+                        </h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipiscing
+                            elit sed do eiusmod.
+                        </p>
+                        <a routerLink="/blog-details" class="blog-btn"
+                            >Read More</a
+                        >
+                        <ul class="entry-meta">
+                            <li>
+                                <i class="bx bxs-user"></i>
+                                <span
+                                    >By
+                                    <a routerLink="/blog-grid"
+                                        >Babatunde Jon</a
+                                    ></span
+                                >
+                            </li>
+                            <li>
+                                <i class="bx bxs-comment"></i>
+                                2 Comments
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Section for Home Demo - 8 -->
+<!-- <div class="hospital-blog-area pt-100 pb-75">
+    <div class="container">
+        <div class="section-title with-hospital-color">
+            <span class="sub-title">Our Blog</span>
+            <h2>Recent Articles And News</h2>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="hospital-blog-card">
+                    <div class="blog-image">
+                        <a routerLink="/blog-details" class="d-block">
+                            <img
+                                src="assets/images/hospital/blog/blog1.jpg"
+                                alt="image"
+                            />
+                        </a>
+                        <div class="date">12 Nov 2023</div>
+                    </div>
+                    <div class="blog-content">
+                        <ul class="meta">
+                            <li>
+                                <i class="bx bx-user"></i> By
+                                <a routerLink="/blog-grid">Admin</a>
+                            </li>
+                            <li>
+                                <i class="bx bx-message-rounded-dots"></i> No
+                                Comment
+                            </li>
+                        </ul>
+                        <h3>
+                            <a routerLink="/blog-details">
+                                It Is Very Important To Wear Proper Clothing To
+                                Keep
+                            </a>
+                        </h3>
+                        <a routerLink="/blog-details" class="blog-btn"
+                            >Read More</a
+                        >
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="hospital-blog-card">
+                    <div class="blog-image">
+                        <a routerLink="/blog-details" class="d-block">
+                            <img
+                                src="assets/images/hospital/blog/blog2.jpg"
+                                alt="image"
+                            />
+                        </a>
+                        <div class="date">11 Nov 2023</div>
+                    </div>
+                    <div class="blog-content">
+                        <ul class="meta">
+                            <li>
+                                <i class="bx bx-user"></i> By
+                                <a routerLink="/blog-grid">Admin</a>
+                            </li>
+                            <li>
+                                <i class="bx bx-message-rounded-dots"></i> No
+                                Comment
+                            </li>
+                        </ul>
+                        <h3>
+                            <a routerLink="/blog-details">
+                                In This Hospital There Special Surgeon Here Now
+                            </a>
+                        </h3>
+                        <a routerLink="/blog-details" class="blog-btn"
+                            >Read More</a
+                        >
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="hospital-blog-card">
+                    <div class="blog-image">
+                        <a routerLink="/blog-details" class="d-block">
+                            <img
+                                src="assets/images/hospital/blog/blog3.jpg"
+                                alt="image"
+                            />
+                        </a>
+                        <div class="date">10 Nov 2023</div>
+                    </div>
+                    <div class="blog-content">
+                        <ul class="meta">
+                            <li>
+                                <i class="bx bx-user"></i> By
+                                <a routerLink="/blog-grid">Admin</a>
+                            </li>
+                            <li>
+                                <i class="bx bx-message-rounded-dots"></i> No
+                                Comment
+                            </li>
+                        </ul>
+                        <h3>
+                            <a routerLink="/blog-details">
+                                Transplantation Techniques & Heart Surgery
+                            </a>
+                        </h3>
+                        <a routerLink="/blog-details" class="blog-btn"
+                            >Read More</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->

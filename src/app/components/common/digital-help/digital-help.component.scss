@@ -1,0 +1,280 @@
+.hospital-app-area {
+    background-color: #f8f8f8;
+    overflow: hidden;
+}
+.hospital-app-image {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+
+    .circle {
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        content: "";
+        width: 625px;
+        margin: auto;
+        height: 625px;
+        position: absolute;
+        border-radius: 50%;
+        background: linear-gradient(180deg, rgba(19, 168, 180, 0.35) 0%, rgba(196, 196, 196, 0) 100%);
+    }
+}
+.hospital-app-content {
+    padding-left: 30px;
+    position: relative;
+    top: -45px;
+
+    .sub-title {
+        color: var(--hospital-main-color);
+        margin-bottom: 15px;
+        display: block;
+        font: {
+            size: 18px;
+            weight: 500;
+            family: var(--hospital-font-family);
+        };
+    }
+    h2 {
+        margin-bottom: 15px;
+        color: var(--hospital-black-color);
+        font: {
+            size: 38px;
+            family: var(--hospital-font-family);
+        };
+    }
+    p {
+        font-family: var(--hospital-font-family);
+    }
+    .list {
+        padding-left: 0;
+        list-style-type: none;
+        margin: {
+            top: 5px;
+            bottom: 0;
+        };
+        li {
+            background-color: var(--white-color);
+            padding: 25px 20px 25px 75px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            position: relative;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+            img {
+                transform: translateY(-50%);
+                position: absolute;
+                left: 20px;
+                top: 50%;
+            }
+            h4 {
+                color: var(--hospital-black-color);
+                margin-bottom: 0;
+                font: {
+                    size: 18px;
+                    family: var(--hospital-font-family);
+                };
+            }
+        }
+    }
+    .app-btn-list {
+        padding-left: 0;
+        list-style-type: none;
+        margin: {
+            top: 30px;
+            bottom: 0;
+        };
+        li {
+            display: inline-block;
+            margin-right: 20px;
+
+            a {
+                display: inline-block;
+
+                img {
+                    border-radius: 10px;
+                }
+                &:hover {
+                    transform: translateY(-5px);
+                }
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .hospital-app-area {
+        .col-lg-6 {
+            &:nth-child(1) {
+                order: 2;
+            }
+            &:nth-child(2) {
+                order: 1;
+            }
+        }
+    }
+    .hospital-app-image {
+        .circle {
+            display: none;
+        }
+    }
+    .hospital-app-content {
+        margin-bottom: 25px;
+        padding-left: 0;
+        top: 0;
+    
+        .sub-title {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        h2 {
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+        .list {
+            margin-top: 0;
+
+            li {
+                padding: 15px;
+                
+                img {
+                    transform: translateY(0);
+                    margin-bottom: 15px;
+                    position: relative;
+                    left: 0;
+                    top: 0;
+                }
+                h4 {
+                    font-size: 15px;
+                }
+            }
+        }
+        .app-btn-list {
+            margin-top: 25px;
+
+            li {
+                margin-right: 15px;
+    
+                a {
+                    img {
+                        width: 120px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .hospital-app-area {
+        .col-lg-6 {
+            &:nth-child(1) {
+                order: 2;
+            }
+            &:nth-child(2) {
+                order: 1;
+            }
+        }
+    }
+    .hospital-app-content {
+        margin-bottom: 25px;
+        padding-left: 0;
+        top: 0;
+    
+        .sub-title {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        h2 {
+            margin-bottom: 10px;
+            font-size: 29px;
+        }
+        .list {
+            margin-top: 0;
+
+            li {
+                padding: 20px 20px 20px 75px;
+                
+                h4 {
+                    font-size: 17px;
+                }
+            }
+        }
+        .app-btn-list {
+            margin-top: 25px;
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    .hospital-app-image {
+        .circle {
+            width: 450px;
+            height: 450px;
+        }
+    }
+    .hospital-app-content {
+        padding-left: 30px;
+        position: relative;
+        top: -45px;
+    
+        .sub-title {
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+        h2 {
+            margin-bottom: 12px;
+            font-size: 35px;
+        }
+        .list {
+            margin-top: 0;
+
+            li {
+                padding: 15px 15px 15px 70px;
+    
+                img {
+                    left: 15px;
+                }
+                h4 {
+                    font-size: 16px;
+                }
+            }
+        }
+        .app-btn-list {
+            margin-top: 25px;
+        }
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+
+    .hospital-app-image {
+        .circle {
+            width: 550px;
+            height: 550px;
+        }
+    }
+
+}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

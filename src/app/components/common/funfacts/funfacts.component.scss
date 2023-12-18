@@ -1,0 +1,96 @@
+.hospital-fun-facts-area {
+    background: {
+        position: center center;
+        repeat: no-repeat;
+        size: cover;
+        color: var(--main-color);
+    }
+}
+.hospital-fun-fact {
+    margin-bottom: 25px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+
+    // &.font-family {
+    //     h3 {
+    //         font-family: var(--font-family);
+    //     }
+    //     p {
+    //         font-family: var(--font-family);
+    //     }
+    // }
+    h3 {
+        line-height: 1;
+        margin-bottom: 5px;
+        color: var(--white-color);
+        font: {
+            // family: var(--hospital-font-family);
+            weight: 900;
+            size: 70px;
+        }
+    }
+    p {
+        line-height: initial;
+        color: var(--white-color);
+        font: {
+            // family: var(--hospital-font-family);
+            weight: 500;
+            size: 18px;
+        }
+    }
+    .shape {
+        left: 0;
+        right: 0;
+        top: 50%;
+        z-index: -1;
+        position: absolute;
+        text-align: center;
+        transform: translateY(-50%);
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width: 767px) {
+    .hospital-fun-fact {
+        h3 {
+            font-size: 42px;
+        }
+        p {
+            font-size: 15px;
+        }
+    }
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .hospital-fun-fact {
+        h3 {
+            font-size: 55px;
+        }
+        p {
+            font-size: 16px;
+        }
+    }
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .hospital-fun-fact {
+        h3 {
+            font-size: 60px;
+        }
+    }
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {
+}

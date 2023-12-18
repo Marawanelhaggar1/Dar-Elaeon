@@ -1,0 +1,128 @@
+<div
+    [dir]="lang"
+    class="top-header-area"
+    [ngClass]="lang === 'ltr' ? 'ltr' : 'rtl'"
+>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-xl-6 col-lg-7 col-md-12">
+                <ul class="top-header-information">
+                    <li>
+                        <i class="bx bxs-phone"></i>
+                        <span
+                            ><a href="tel:19647">{{
+                                lang === "ltr" ? "19647" : "١٩٦٤٧ "
+                            }}</a></span
+                        >
+                    </li>
+                    <li class="social">
+                        <a
+                            href="https://www.facebook.com/RouvanhospitalEg"
+                            target="_blank"
+                        >
+                            <i class="bx bxl-facebook"></i>
+                        </a>
+                        <a href="https://twitter.com/?lang=en" target="_blank">
+                            <i class="bx bxl-twitter"></i>
+                        </a>
+                        <a
+                            href="https://www.linkedin.com/company/rouvanhospital/"
+                            target="_blank"
+                        >
+                            <i class="bx bxl-linkedin"></i>
+                        </a>
+                        <a
+                            href="https://www.instagram.com/rouvanhospitaleg?fbclid=IwAR2DsgO2feehTPFmKFU-ZhIepmYdWQoyJBjum6IZvD8HQyynGVToyz1TsCY"
+                            target="_blank"
+                        >
+                            <i class="bx bxl-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-xl-6 col-lg-5 col-md-12 resp">
+                <ul class="top-header-optional">
+                    <li>
+                        <div *ngIf="!user">
+                            <button
+                                routerLink="/login"
+                                class="auth"
+                                type="button"
+                            >
+                                <p>
+                                    {{
+                                        lang === "ltr"
+                                            ? "Sign In"
+                                            : "تسجيل الدخول "
+                                    }}
+                                    <i class="bx bx-user"></i>
+                                </p>
+                            </button>
+                        </div>
+                        <div *ngIf="user">
+                            <button
+                                (click)="logout()"
+                                class="auth"
+                                type="button"
+                            >
+                                <p>
+                                    {{
+                                        lang === "ltr"
+                                            ? "Sign Out"
+                                            : "تسجيل الخروج "
+                                    }}
+                                    <i class="bx bx-log-out"></i>
+                                </p>
+                            </button>
+                        </div>
+                    </li>
+                    <li>
+                        <button
+                            *ngIf="lang === 'ltr'"
+                            (click)="setArabic()"
+                            class="auth font"
+                            type="button"
+                        >
+                            <p>
+                                العربية
+                                <i class="bx bx-globe"></i>
+                            </p>
+                        </button>
+                        <button
+                            *ngIf="lang === 'rtl'"
+                            (click)="setEnglish()"
+                            class="auth font"
+                            type="button"
+                        >
+                            <p>
+                                English
+                                <i class="bx bx-globe"></i>
+                            </p>
+                        </button>
+                    </li>
+                    <li class="social">
+                        <a
+                            href="https://www.facebook.com/RouvanhospitalEg"
+                            target="_blank"
+                        >
+                            <i class="bx bxl-facebook"></i>
+                        </a>
+
+                        <a
+                            href="https://www.linkedin.com/company/rouvanhospital/"
+                            target="_blank"
+                        >
+                            <i class="bx bxl-linkedin"></i>
+                        </a>
+                        <a
+                            href="https://www.instagram.com/rouvanhospitaleg?fbclid=IwAR2DsgO2feehTPFmKFU-ZhIepmYdWQoyJBjum6IZvD8HQyynGVToyz1TsCY"
+                            target="_blank"
+                        >
+                            <i class="bx bxl-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+<div
+    class="coming-soon-area"
+    style="background-image: url(assets/images/coming-soon-bg.jpg);"
+>
+    <div class="d-table">
+        <div class="d-table-cell">
+            <div class="container">
+                <div class="coming-soon-content">
+                    <div class="logo">
+                        <a routerLink="/">
+                            Inba
+                        </a>
+                    </div>
+                    <h2>We Are Launching Soon</h2>
+                    <div id="timer" class="flex-wrap d-flex justify-content-center">
+                        <div id="days" class="align-items-center flex-column d-flex justify-content-center">
+                            {{days}}
+                            <span class="days">Days</span>
+                        </div>
+                        <div id="hours" class="align-items-center flex-column d-flex justify-content-center">
+                            {{hours}}
+                            <span class="hours">Hours</span>
+                        </div>
+                        <div id="minutes" class="align-items-center flex-column d-flex justify-content-center">
+                            {{minutes}}
+                            <span class="minutes">Mins</span>
+                        </div>
+                        <div id="seconds" class="align-items-center flex-column d-flex justify-content-center">
+                            {{seconds}}
+                            <span class="seconds">Secs</span>
+                        </div>
+                    </div>
+                    <form class="newsletter-form">
+                        <input type="email" class="form-control" placeholder="Enter your email">
+                        <button type="submit" class="default-btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

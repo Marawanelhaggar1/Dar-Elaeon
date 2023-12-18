@@ -1,0 +1,241 @@
+<div [dir]="lang" class="appointment-overview-area pb-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-12">
+                <div class="appointment-overview-contact">
+                    <img
+                        src="https://angular.hibotheme.com/inba/inba-rtl/assets/images/appointment/appointment-1.jpg"
+                        alt="appointment-image"
+                    />
+                    <div class="appointment-info">
+                        <div class="call-info">
+                            <i class="flaticon-039-emergency-call"></i>
+                            {{ lang === "ltr" ? "Call Today" : "اتصل اليوم" }}
+                            <span>
+                                <a href="tel:19647">
+                                    {{ lang === "ltr" ? "+19647" : "١٩٦٤٧+ " }}
+                                </a>
+                            </span>
+                        </div>
+                        <p>
+                            {{
+                                lang === "ltr"
+                                    ? "Call Us AnyTime Between 10 am and 10pm "
+                                    : "اتصل بنا فى أى وقت بين ١٠ صباحا و ١٠ مساءا"
+                            }}
+                        </p>
+                        <a routerLink="/contact-us-3" class="default-btn">
+                            {{ lang === "ltr" ? "Contact Us" : " تواصل معنا " }}
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-12">
+                <div class="appointment-overview-box">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6">
+                            <div class="make-appointment-content">
+                                <h4>
+                                    <i class="flaticon-170-calendar-1"></i>
+
+                                    {{
+                                        lang === "ltr"
+                                            ? " Make An Appointment"
+                                            : " إحجز موعد"
+                                    }}
+                                </h4>
+
+                                <form [formGroup]="searchForm">
+                                    <div class="form-group">
+                                        <label>{{
+                                            lang === "ltr"
+                                                ? "  Specialty "
+                                                : " التخصص "
+                                        }}</label>
+                                        <input
+                                            [typeahead]="specialties"
+                                            formControlName="specialty"
+                                            [placeholder]="
+                                                lang === 'ltr'
+                                                    ? 'Specialty'
+                                                    : 'التخصص'
+                                            "
+                                            [optionsListTemplate]="
+                                                customListTemplate
+                                            "
+                                            [typeaheadOptionsLimit]="100"
+                                            [typeaheadMinLength]="0"
+                                            (typeaheadOnSelect)="getDoctor()"
+                                            class="form-control"
+                                        />
+                                        <ng-template
+                                            #customListTemplate
+                                            let-matches="matches"
+                                            let-query="query"
+                                            let-typeaheadTemplateMethods
+                                        >
+                                            <ul class="custom-list-group">
+                                                <li
+                                                    class="custom-list-group-item"
+                                                    *ngFor="
+                                                        let match of matches
+                                                    "
+                                                    [class.active]="
+                                                        typeaheadTemplateMethods.isActive(
+                                                            match
+                                                        )
+                                                    "
+                                                    (click)="
+                                                        typeaheadTemplateMethods.selectMatch(
+                                                            match,
+                                                            $event
+                                                        )
+                                                    "
+                                                    (mouseenter)="
+                                                        typeaheadTemplateMethods.selectActive(
+                                                            match
+                                                        )
+                                                    "
+                                                >
+                                                    <i
+                                                        class="flaticon-149-doctor-2"
+                                                    ></i>
+                                                    {{ match }}
+                                                </li>
+                                            </ul>
+                                        </ng-template>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>{{
+                                            lang === "ltr"
+                                                ? "  Doctor "
+                                                : " دكتور "
+                                        }}</label>
+                                        <input
+                                            [typeahead]="doctor"
+                                            formControlName="doctor"
+                                            [placeholder]="
+                                                lang === 'ltr'
+                                                    ? 'Doctors'
+                                                    : 'الدكتور'
+                                            "
+                                            [optionsListTemplate]="
+                                                customListTemplate
+                                            "
+                                            [typeaheadOptionsLimit]="100"
+                                            [typeaheadMinLength]="0"
+                                            (typeaheadOnSelect)="set()"
+                                            class="form-control"
+                                        />
+                                        <ng-template
+                                            #customListTemplate
+                                            let-matches="matches"
+                                            let-query="query"
+                                            let-typeaheadTemplateMethods
+                                        >
+                                            <ul class="custom-list-group">
+                                                <li
+                                                    class="custom-list-group-item"
+                                                    *ngFor="
+                                                        let match of matches
+                                                    "
+                                                    [class.active]="
+                                                        typeaheadTemplateMethods.isActive(
+                                                            match
+                                                        )
+                                                    "
+                                                    (click)="
+                                                        typeaheadTemplateMethods.selectMatch(
+                                                            match,
+                                                            $event
+                                                        )
+                                                    "
+                                                    (mouseenter)="
+                                                        typeaheadTemplateMethods.selectActive(
+                                                            match
+                                                        )
+                                                    "
+                                                >
+                                                    <i
+                                                        class="flaticon-149-doctor-2"
+                                                    ></i>
+                                                    {{ match.name }}
+                                                </li>
+                                            </ul>
+                                        </ng-template>
+                                    </div>
+                                    <a
+                                        [routerLink]="[
+                                            '/book-doctor',
+                                            docId,
+                                            searchForm.value.specialty
+                                        ]"
+                                        type="button"
+                                        class="default-btn"
+                                    >
+                                        <span>
+                                            <i
+                                                *ngIf="lang === 'ltr'"
+                                                class="bx bx-search"
+                                            ></i>
+                                            <span>
+                                                {{
+                                                    lang === "ltr"
+                                                        ? "  Search "
+                                                        : " ابحث "
+                                                }}
+                                            </span>
+                                            <i
+                                                *ngIf="lang === 'rtl'"
+                                                class="bx bx-search"
+                                            ></i>
+                                        </span>
+                                    </a>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="content">
+                                <h4>
+                                    {{
+                                        lang === "ltr"
+                                            ? " We Are a Certified and Award-winning Hospital "
+                                            : " نحن مستشفى معتمد وحائز على جوائز "
+                                    }}
+                                </h4>
+                                <div class="box-image">
+                                    <img
+                                        src="https://angular.hibotheme.com/inba/inba-rtl/assets/images/appointment/appointment-2.jpg"
+                                        alt="appointment-image"
+                                    />
+                                    <button
+                                        class="video-btn"
+                                        (click)="openPopup()"
+                                    >
+                                        <i class="bx bx-play"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Video Popup -->
+<div class="video-popup" *ngIf="isOpen">
+    <div class="popup-inner">
+        <iframe
+            src="https://www.youtube.com/embed/XNQk1qt__Vw"
+            title="Setup and Local Installation - React Nextjs Online Yoga Coaching &amp; Training Courses System"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+        ></iframe>
+        <button (click)="closePopup()" type="button" class="close-btn">
+            <i class="bx bx-x"></i>
+        </button>
+    </div>
+</div>

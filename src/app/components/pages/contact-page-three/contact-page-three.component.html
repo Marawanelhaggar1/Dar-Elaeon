@@ -1,0 +1,141 @@
+<!-- Page Banner -->
+<div
+    [dir]="lang"
+    class="page-banner-area three ptb-100"
+    [style]="
+        lang === 'ltr'
+            ? ' background-image: url(https://angular.hibotheme.com/inba/assets/images/hospital/page-banner/bg-3.jpg);'
+            : ' background-image: url(https://angular.hibotheme.com/inba/inba-rtl/assets/images/hospital/page-banner/bg-3.jpg);'
+    "
+>
+    <div class="container">
+        <div
+            [ngClass]="
+                lang === 'ltr'
+                    ? 'page-banner-content'
+                    : 'page-banner-content-rtl text-end'
+            "
+        >
+            <h2>{{ lang === "ltr" ? "Contact Us" : "تواصل معنا" }}</h2>
+            <ul class="pages-list">
+                <li>
+                    <a href="index.html">{{
+                        lang === "ltr" ? " Home" : "الرئيسيه"
+                    }}</a>
+                </li>
+                <li>{{ lang === "ltr" ? "Contact Us" : "تواصل معنا" }}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Contact Us -->
+<div class="contact-area ptb-100" [dir]="lang">
+    <div class="container">
+        <div class="hospital-contact-form">
+            <div class="section-title with-hospital-color">
+                <span class="sub-title">{{
+                    lang === "ltr" ? "Let Us Help You" : "دعنا نساعدك"
+                }}</span>
+                <h2>
+                    {{
+                        lang === "ltr"
+                            ? "Have Queries Before The Appointment ? "
+                            : "عندك اسئلة قبل حجزك ؟ "
+                    }}
+                </h2>
+            </div>
+            <form>
+                <div class="row">
+                    <div class="col-lg-6 col-sm-6">
+                        <div class="form-group">
+                            <input
+                                type="text"
+                                name="name"
+                                class="form-control"
+                                [placeholder]="
+                                    lang === 'ltr' ? 'Name' : 'الاسم'
+                                "
+                                required
+                            />
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-6">
+                        <div class="form-group">
+                            <input
+                                type="email"
+                                name="email"
+                                class="form-control"
+                                [placeholder]="
+                                    lang === 'ltr'
+                                        ? 'Your email'
+                                        : 'بريدك الالكترونى'
+                                "
+                                required
+                            />
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-6">
+                        <div class="form-group">
+                            <input
+                                type="text"
+                                name="phone_number"
+                                required
+                                class="form-control"
+                                [placeholder]="
+                                    lang === 'ltr' ? 'Your phone' : 'رقم هاتفك'
+                                "
+                            />
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-6">
+                        <div class="form-group">
+                            <input
+                                type="text"
+                                name="msg_subject"
+                                class="form-control"
+                                required
+                                [placeholder]="
+                                    lang === 'ltr' ? 'Subject' : 'الموضوع'
+                                "
+                            />
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-sm-12">
+                        <div class="form-group">
+                            <textarea
+                                name="message"
+                                class="form-control"
+                                cols="30"
+                                rows="5"
+                                [placeholder]="
+                                    lang === 'ltr' ? 'your message' : 'رسالتك'
+                                "
+                                required
+                            ></textarea>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-sm-12">
+                        <button type="submit" class="default-btn">
+                            {{
+                                lang === "ltr" ? " Send Message" : "أرسل رساله"
+                            }}
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<app-contact-info></app-contact-info>
+
+<iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11937.313321859823!2d31.210933626347778!3d27.18822444881498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14450bdab155b8dd%3A0xbe576e24e95992a!2z2YXYs9iq2LTZgdmKINix2YjZgdin2YY!5e0!3m2!1sen!2seg!4v1699055576161!5m2!1sen!2seg"
+    width="600"
+    height="450"
+    style="border: 0"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+></iframe>

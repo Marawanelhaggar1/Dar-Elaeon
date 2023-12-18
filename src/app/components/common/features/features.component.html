@@ -1,0 +1,67 @@
+<!-- Default Features Section -->
+<div
+    [dir]="lang"
+    class="core-features-area pt-100 pb-75 bg-eef9ff"
+    [ngClass]="{
+        'd-none':
+            router.url === '/index-2' ||
+            router.url === '/index-4' ||
+            router.url === '/index-5' ||
+            router.url === '/index-6' ||
+            router.url === '/index-7' ||
+            router.url === '/appointment' ||
+            router.url === '/about-us' ||
+            router.url === '/about-us-2'
+    }"
+>
+    <div class="container">
+        <div
+            [ngClass]="
+                lang === 'ltr' ? 'section-title-warp' : 'section-title-warp-rtl'
+            "
+        >
+            <span class="sub-title">
+                <i class="flaticon-198-hashtag-1"></i>
+                {{
+                    lang === "ltr"
+                        ? "  Specialty and Our Features "
+                        : " التخصص وميزاتنا "
+                }}
+            </span>
+            <h2>
+                {{
+                    lang === "ltr"
+                        ? " Features That You Will Love Us "
+                        : "  تخصصات طبية"
+                }}
+            </h2>
+            <a routerLink="/services-2" class="default-btn">{{
+                lang === "ltr" ? " View All " : " عرض الكل "
+            }}</a>
+        </div>
+        <div class="row justify-content-center">
+            <div
+                class="col-xl-3 col-lg-6 col-sm-6"
+                *ngFor="let item of services"
+            >
+                <div class="single-core-features">
+                    <div class="icon">
+                        <i [ngClass]="item.icon"></i>
+                    </div>
+                    <h3>
+                        <a routerLink="/service-details">
+                            {{ lang === "ltr" ? item.en : item.ar }}</a
+                        >
+                    </h3>
+                    <!-- <p>
+                        {{
+                            lang === "ltr"
+                                ? item.descriptionEn
+                                : item.descriptionAr
+                        }}
+                    </p> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
