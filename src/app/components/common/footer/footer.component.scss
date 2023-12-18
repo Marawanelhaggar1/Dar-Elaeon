@@ -70,7 +70,7 @@
                 position: relative;
 
                 &:hover {
-                    color: var(--main-color);
+                    // color: var(--main-color);
 
                     &::before {
                         width: 100%;
@@ -84,7 +84,7 @@
                     content: "";
                     position: absolute;
                     transition: var(--transition);
-                    background-color: var(--main-color);
+                    background-color: var(--white-color);
                 }
             }
             &:last-child {
@@ -184,7 +184,7 @@
                 top: 50%;
                 font-size: 38px;
                 position: absolute;
-                color: var(--main-color);
+                color: var(--white-color);
                 transform: translateY(-50%);
             }
             span {
@@ -199,7 +199,7 @@
                     color: var(--white-color);
 
                     &:hover {
-                        color: var(--main-color);
+                        // color: var(--main-color);
                     }
                 }
             }
@@ -305,7 +305,7 @@
                 position: relative;
 
                 &:hover {
-                    color: var(--main-color);
+                    // color: var(--main-color);
 
                     &::before {
                         width: 100%;
@@ -319,7 +319,7 @@
                     content: "";
                     position: absolute;
                     transition: var(--transition);
-                    background-color: var(--main-color);
+                    background-color: var(--white-color);
                 }
             }
             &:last-child {
@@ -372,7 +372,7 @@
                         color: var(--white-color);
 
                         &:hover {
-                            color: var(--main-color);
+                            // color: var(--main-color2);
                         }
                     }
                 }
@@ -387,7 +387,7 @@
                         color: var(--white-color);
 
                         &:hover {
-                            color: var(--main-color);
+                            // color: var(--main-color);
                         }
                     }
                 }
@@ -419,7 +419,7 @@
                 top: 50%;
                 font-size: 38px;
                 position: absolute;
-                color: var(--main-color);
+                color: var(--white-color);
                 transform: translateY(-50%);
             }
             span {
@@ -434,7 +434,7 @@
                     color: var(--white-color);
 
                     &:hover {
-                        color: var(--main-color);
+                        // color: var(--main-color);
                     }
                 }
             }
