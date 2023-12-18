@@ -1,5 +1,5 @@
 .footer-area {
-    background-color: var(--main-color2);
+    background-color: var(--main-color);
 }
 .single-footer-widget {
     margin-bottom: 25px;
@@ -207,7 +207,7 @@
     }
 }
 .copyright-area {
-    background-color: var(--main-color2);
+    background-color: var(--main-color);
 
     .copyright-area-content {
         border-top: 1px solid #2e405b;
@@ -445,7 +445,7 @@
 /* Max width 767px */
 @media only screen and (max-width: 767px) {
     .footer-area {
-        background-color: #091e3e;
+        background-color: var(--main-color);
     }
     .single-footer-widget {
         h2 {
